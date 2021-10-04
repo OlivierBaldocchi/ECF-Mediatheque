@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Dancing+Script:wght@600&display=swap');
+
+.menu {
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
+.btnmenu {
+    background-color: orange;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 10px;
+    width: 20vw;
+    font-size: 4vw;
+}
+
+a {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 3.8vw;
+}
+
+.title {
+    height: 40vh;
+    background-color: rgb(78, 149, 216);
+    margin: 1vw;
+}
+
+h1 {
+    color: rgb(255, 251, 0);
+    font-family: 'Architects Daughter', cursive;
+    font-size: 6vw;
+    margin-top: 8vw;
+    margin-left: 12vw;
+}
+
+.form_connexion {
+    position: absolute;
+    top: 22vh;
+    left: 10vw;
+}
+
+input {
+    width: 35vw;
+    font-size: 4vw;
+    font-family: 'Architects Daughter', cursive;
+    padding-left: 0.5vw;
+    color: black;
+}
+
+.button1 {
+    background-color: orange;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 10px;
+    font-size: 4vw;
+    width: 35vw;
+    height: 5vh;
+}
+
+.cont-img {
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    top: 1vh;
+    left: 60vw;
+}
+
+.textimage {
+    position: absolute;
+    top: 1vh;
+    left: 10vw;
+    color: rgb(78, 149, 216);
+    font-size: 6vw;
+    font-family: 'Dancing Script', cursive;
+}
+
+.little {
+    font-size: 4vw;
+    font-family: 'Architects Daughter', cursive;
+    margin-top: 3vh;
+}
+
+.button2 {
+    background-color: orange;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 10px;
+    font-size: 2.5vw;
+    width: 30vw;
+}
+
+.button_inscr {
+    background-color: orange;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 10px;
+    font-size: 2.5vw;
+    width: 30vw;
+}

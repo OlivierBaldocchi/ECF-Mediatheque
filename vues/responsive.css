@@ -1,0 +1,214 @@
+@media screen and (min-width: 576px) {
+    .cont-img {
+        position: relative;
+    }
+    
+    .img {
+        position: absolute;
+        top: 1vh;
+        left: 55vw;
+    }
+    
+    .textimage {
+        top: 0;
+        left: 2vw;
+    }
+
+    h1 {
+        margin-left: 15vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cont-img {
+        position: relative;
+    }
+    
+    .img {
+        position: absolute;
+        top: 1vh;
+        left: 57vw;
+    }
+
+    h1 {
+        margin-left: 35vw;
+    }
+    
+    .form_connexion {
+        left: 8%;
+    }
+
+    input {
+        width: 35vw;
+        font-size: 4vw;
+    }
+
+    .button1 {
+        font-size: 2.5vw;
+        width: 35vw;
+        height: 5vh;
+    }
+
+}   
+
+
+@media screen and (min-width: 990px) {
+    
+    h1 {
+        font-size: 3vw;
+        margin-left: 38vw;
+    }
+    
+    .title {
+        height: 22vw;  
+    }
+    
+    .cont-img {
+        position: relative;
+    }
+    
+    .img {
+        position: absolute;
+        top: 1vh;
+        left: 40vw;
+    }
+
+    .textimage {
+        top: 5vh;
+        left: 10vw;
+        font-size: 4vw;
+    }
+    
+    .little {
+        font-size: 2vw;
+        margin-top: 6vh;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {   
+    .btnmenu {
+        width: 6vw;
+        font-size: 1.3vw;
+    }
+    
+    a {
+        font-size: 1vw;
+    }
+    
+    .title {
+        height: 22vh;  
+    }
+    
+    h1 {
+        font-size: 3vw;
+        margin-left: 13vw;
+    }
+    
+    .form_connexion {
+        position: relative;
+        top: 2vh;  
+    }
+    
+    input {
+        width: 12vw;
+        font-size: 1vw;
+        color: #000;
+    }
+    
+    .button1 {
+        font-size: 1vw;
+        width: 12vw;
+        height: 5vh;
+    }
+
+    .cont-img {
+        top: 1vh;
+        left: 0;
+    }
+    
+    .img {
+        position: absolute;
+        top: 1vh;
+        left: 45vw;
+    }
+
+    .textimage {
+        top: 3vh;
+        left: 18vw;
+        font-size: 2vw;
+    }
+
+    .little {
+        font-size: 1.5vw;
+        margin-top: 2vh;
+    }
+    
+    .button2 {
+        font-size: 1vw;
+        width: 10vw;
+        height: 4vh;
+    }
+}
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .menu {
+        margin-top: 4vh;
+        margin-left: 2vw;
+    }
+    
+    .btnmenu {
+        width: 10vw;
+        font-size: 2vw;
+    }
+    
+    a {
+        font-size: 2vw;
+    }
+    
+    .title {
+        height: 25vh;
+        margin: 1vw;
+    }
+    
+    h1 {
+        font-size: 4vw;
+        margin-top: 8vw;
+        margin-left: 12vw;
+    }
+    
+    .form_connexion {
+        position: relative;
+        top: 2vh;
+        left: 0;
+    }
+    
+    input {
+        width: 20vw;
+        font-size: 2vw;
+    }
+    
+    .button1 {
+        font-size: 2vw;
+        width: 20vw;
+        height: 5vh;
+    }
+}
+
+
+ 
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
