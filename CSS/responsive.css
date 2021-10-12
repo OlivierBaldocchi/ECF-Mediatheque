@@ -1,34 +1,11 @@
 @media screen and (min-width: 576px) {
-    .cont-img {
-        position: relative;
-    }
     
-    .img {
-        position: absolute;
-        top: 1vh;
-        left: 55vw;
-    }
-    
-    .textimage {
-        top: 0;
-        left: 2vw;
-    }
-
     h1 {
         margin-left: 15vw;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .cont-img {
-        position: relative;
-    }
-    
-    .img {
-        position: absolute;
-        top: 1vh;
-        left: 57vw;
-    }
 
     h1 {
         margin-left: 35vw;
@@ -61,22 +38,6 @@
     
     .title {
         height: 22vw;  
-    }
-    
-    .cont-img {
-        position: relative;
-    }
-    
-    .img {
-        position: absolute;
-        top: 1vh;
-        left: 40vw;
-    }
-
-    .textimage {
-        top: 5vh;
-        left: 10vw;
-        font-size: 4vw;
     }
     
     .little {
@@ -121,24 +82,7 @@
         width: 12vw;
         height: 5vh;
     }
-
-    .cont-img {
-        top: 1vh;
-        left: 0;
-    }
     
-    .img {
-        position: absolute;
-        top: 1vh;
-        left: 45vw;
-    }
-
-    .textimage {
-        top: 3vh;
-        left: 18vw;
-        font-size: 2vw;
-    }
-
     .little {
         font-size: 1.5vw;
         margin-top: 2vh;
@@ -148,6 +92,17 @@
         font-size: 1vw;
         width: 10vw;
         height: 4vh;
+    }
+
+    .infos {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 3vw;
+        font-weight: 300;
+    }
+
+    .suggestion:hover {
+        background-color: cornflowerblue;
+        color: white;
     }
 }
 

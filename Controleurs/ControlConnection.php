@@ -1,0 +1,15 @@
+<?php
+
+require_once '../Modeles/User.php';
+require_once '../Modeles/UserManager.php';
+
+use Modeles\User; 
+use Modeles\UserManager; 
+
+$user = new User();
+
+$userManager = new UserManager();
+
+$user = $userManager->read($_POST['email']); 
+
+require_once '../Modeles/Connection.php'; 
