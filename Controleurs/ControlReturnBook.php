@@ -18,5 +18,8 @@ $emprunt = new Emprunt();
 $empruntManager = new EmpruntManager();
 
 
-$list = $empruntManager->read($id);
-  
+$cancel = $empruntManager->delete($_GET['book']); 
+
+$retour = $bookManager->retour($_GET['book']);
+
+echo 'retour effectué';

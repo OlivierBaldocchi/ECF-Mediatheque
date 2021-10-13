@@ -22,14 +22,34 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
         <main>
             <div class="container">    
                 <div class="row"> 
-                    <div class="col-3 mt-5 ml-5"> 
-                        <p class="little">Informations<br>livres réservés</p> 
-                        <form action="../Controleurs/ControlSearchBook.php" method="post">
-                            <input type="text" placeholder="titre du livre" id="titre" name="titre">  
-                            <div class="mt-5">
-                                <button class="button2" type="submit">Rechercher</button>
-                            </div>
-                        </form>   
+                    
+                    <div>
+                        <p class="little">Ajouter un livre</p>
+                        <form action="../Controleurs/ControlCreateBook.php" method="post">
+                            <input type="text" placeholder="titre" id="titre" name="titre">
+                            <input type="text" placeholder="parution" id="parution" name="parution">
+                            <input type="text" placeholder="description" id="description" name="description">
+                            <input type="text" placeholder="auteur" id="auteur" name="auteur">
+                            <input type="text" placeholder="genre" id="genre" name="genre">                                <button class="button2" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+
+                    <div class="col-6 mt-5 ml-5 infos"> 
+                        <p class="little">Informations livres réservés</p> 
+
+                        <?php include_once '../Controleurs/ControlReservedBooksList.php'; 
+                        
+                        try {
+                            foreach ($list as $book) {
+                                if ($book->getDateEmprunt() === 'réservé'){
+                                    echo $book->titre .', réservé par: '. $book->email .'<br>';                                                                       
+                                }                                                                       
+                            }         
+                        } catch (PDOException $e) {
+                            echo 'Impossible de récupérer la liste des livres';
+                        }
+                                        
+                        ?>
                     </div>
                     
                     <div class="col-3 mt-5">

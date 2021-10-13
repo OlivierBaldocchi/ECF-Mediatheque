@@ -38,7 +38,11 @@ class EmpruntManager {
     } 
 
     public function read($utilisateurid) {
-        $this->pdoStatement = $this->pdo->prepare('SELECT * FROM emprunts WHERE utilisateurid = ?');
+        $this->pdoStatement = $this->pdo->prepare('SELECT emprunts.utilisateurid, emprunts.dateemprunt, emprunts.dateresa,
+                                                    emprunts.bookid, books.titre FROM emprunts 
+                                                    JOIN books ON emprunts.bookid = books.id
+                                                    WHERE emprunts.utilisateurid = ?
+                                                    ORDER BY emprunts.dateemprunt');
         $this->pdoStatement->bindValue(1, $utilisateurid, PDO::PARAM_INT);
         $exeOk = $this->pdoStatement->execute();
 
@@ -55,9 +59,9 @@ class EmpruntManager {
     }
 
     public function readAll() {
-        $this->pdoStatement = $this->pdo->query('SELECT * FROM emprunts ORDER BY utilisateurId
-                                                                        JOIN ');
-
+        $this->pdoStatement = $this->pdo->query('SELECT dateemprunt, books.titre, utilisateurs.email FROM emprunts                                                
+                                                JOIN books ON emprunts.bookid = books.id
+                                                JOIN utilisateurs ON utilisateurs.id = emprunts.utilisateurid');
         $emprunts = [];
 
         while ($emprunt = $this->pdoStatement->fetchObject('Modeles\emprunt')) {

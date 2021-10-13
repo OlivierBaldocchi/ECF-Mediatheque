@@ -29,7 +29,7 @@ class Book {
         return $this->parution;
     }
 
-    public function setParution($Parution) {
+    public function setParution($parution) {
         $this->parution = $parution;
         return $this;
     }

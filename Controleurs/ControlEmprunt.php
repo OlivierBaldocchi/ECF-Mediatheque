@@ -26,3 +26,5 @@ $emprunt->setUtilisateurId($_GET['user'])
 
 
 $resa = $empruntManager->update($emprunt, $_GET['book']); 
+
+echo 'emprunt effectué';
