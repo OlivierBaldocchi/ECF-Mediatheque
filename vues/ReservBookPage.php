@@ -1,6 +1,6 @@
 <?php 
-require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
-?>
+require 'C:\xampp\htdocs\MEDIATHEQUE\base.html'; 
+session_start(); ?>
 
 <body>
     <header class="container-fluid">
@@ -11,6 +11,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
             <div class="col-3 col-md-2 m-4">
                 <?php include_once 'ButtonLogOut.php'; ?>
             </div>
+            
         </div>       
     </header>
 
@@ -20,8 +21,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
                 <div class="col-1"> </div>
                 <div class="col-4  mt-5">
                     <?php 
-                    session_start();
-
+                    
                     require_once '../Controleurs/ControlReservBook.php';
                     
                     if ($dispo && $resa) {

@@ -3,13 +3,16 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
 ?>
 
 <body>
+    <?php
+    if (isset($_SESSION['role']) and $_SESSION['role'] === 'INSCR') {
+        ?>
     <header class="container-fluid">
         <div class="row title">
             
             <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php'; ?>    
               
-            <div class="col-3 col-md-2">
-                
+            <div class="col-3 col-md-2 m-4">
+                <?php include_once 'ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>
@@ -21,7 +24,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
                 <div class="col-5 mt-2">
                     <p class="little">Rechercher un livre</p>
                     <div class="mt-5">
-                        <?php require_once '../Controleurs/BooksList.php'; ?>
+                        <?php require_once '../Modeles/BooksListJava.php'; ?>
 
                         <form action="../Vues/BookInfosByTitrePage.php" method="post">                            
                             <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
@@ -116,4 +119,9 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
             </div>
         </div>         
     </main>
+    <?php
+    } else {
+        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+    }
+    ?>
 </body>

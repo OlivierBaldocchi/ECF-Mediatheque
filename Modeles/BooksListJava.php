@@ -1,13 +1,6 @@
 <?php
 
-require_once '../Modeles/Book.php';
-require_once '../Modeles/BookManager.php';
-
-use Modeles\Book; 
-use Modeles\BookManager; 
-
-
-$bookManager = new BookManager();
+require_once '../Controleurs/ControlBooksList.php';
 
 try {
     $books = $bookManager->readAll();
@@ -20,4 +13,3 @@ try {
 } catch (PDOException $e) {
     echo 'Impossible de récupérer la liste des livres';
 }
-

@@ -1,13 +1,6 @@
 <?php
 
-require_once '../Modeles/User.php';
-require_once '../Modeles/UserManager.php';
-
-use Modeles\User; 
-use Modeles\UserManager; 
-
-
-$userManager = new UserManager();
+require_once '../Controleurs/ControlUsersList.php';
 
 try {
     $users = $userManager->readAll();
@@ -22,4 +15,3 @@ try {
 } catch (PDOException $e) {
     echo 'Impossible de récupérer la liste des administrateurs';
 }
-

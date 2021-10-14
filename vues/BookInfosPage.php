@@ -9,8 +9,8 @@ session_start();
             
             <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php'; ?>    
               
-            <div class="col-3 col-md-2">
-                
+            <div class="col-3 col-md-2 m-4">
+                <?php include_once 'ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>

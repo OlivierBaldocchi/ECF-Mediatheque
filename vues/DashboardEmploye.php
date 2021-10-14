@@ -72,8 +72,8 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
             </div>         
         </main>
         <?php
-        } else {
-            echo 'Vous n\'êtes pas autorisé à acceder à cette page';
-        }
+    } else {
+        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+    }
     ?>
 </body>

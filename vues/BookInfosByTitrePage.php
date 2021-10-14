@@ -1,6 +1,7 @@
 <?php 
 require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
 session_start();
+
 ?>
 
 <body>
@@ -9,8 +10,8 @@ session_start();
             
             <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php'; ?>    
               
-            <div class="col-3 col-md-2">
-                
+            <div class="col-3 col-md-2 m-4">
+                <?php include_once 'ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>
@@ -33,13 +34,15 @@ session_start();
                             echo '<u>Auteur</u> :' .'<br>'. $read->getAuteur() .'<br>';
                             echo '<br>';
                             echo '<u>Genre</u> :' .'<br>'. $read->getGenre() .'<br>';
+                            $dispo = $read->getStatut();
+                            $id = $read->getId();
                         }                     
                         ?>
                     </div> 
                     <div class="col-3">
                         <?php
-                        $_SESSION['bookToReserv'] = $_GET['id'];
-                        if ($_GET['dispo'] == 1) { ?>
+                        $_SESSION['bookToReserv'] = $id;
+                        if ($dispo === 1) { ?>
                             <form action="ReservBookPage.php">
                                 <p>Vous pouvez réserver ce livre, puis vous
                                 devrez venir le récuperer dans les 3 jours.</p>

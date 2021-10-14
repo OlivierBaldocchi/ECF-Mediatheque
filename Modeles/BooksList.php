@@ -1,13 +1,6 @@
 <?php
 
-require_once 'Book.php';
-require_once 'BookManager.php';
-
-use Modeles\Book; 
-use Modeles\BookManager; 
-
-
-$bookManager = new BookManager();
+require_once '../Controleurs/ControlBooksList.php';
 
 try {
     $books = $bookManager->readAll();
