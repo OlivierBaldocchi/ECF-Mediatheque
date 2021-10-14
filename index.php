@@ -1,13 +1,13 @@
-<?php require_once 'https://ecf-mediatheque.herokuapp.com/base.html';?>
+<?php require_once 'base.html';?>
 
 <body>
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'https://ecf-mediatheque.herokuapp.com/Vues/MenuTitre.php';?>   
+            <?php include_once 'Vues/MenuTitre.php';?>   
               
             <div class="col-3 col-md-2">
-                <form class="form_connexion" action="https://ecf-mediatheque.herokuapp.com/Modeles/Connection.php" method="post">
+                <form class="form_connexion" action="Modeles/Connection.php" method="post">
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">
                     </div>
@@ -30,12 +30,12 @@
                     <p>Votre médiathèque <br> se modernise !</p>
                     <p>Connectez-vous<br>et profitez du<br>"Click and Collect !"</p>
                     <p class="little">Si vous n'avez pas encore<br>de compte, inscrivez-vous ici</p>
-                    <form action="https://ecf-mediatheque.herokuapp.com/Vues/Inscription.php">
+                    <form action="Vues/Inscription.php">
                         <button class="button2" type="submit">S'inscrire</button>  
                     </form>                        
                 </div>
                 <div class="col-4">
-                    <?php require_once 'https://ecf-mediatheque.herokuapp.com/Vues/BooksImage.php'; ?>                        
+                    <?php require_once 'Vues/BooksImage.php'; ?>                        
                 </div>                           
             </div>
         </div>         
