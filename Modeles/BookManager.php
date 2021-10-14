@@ -15,7 +15,11 @@ class BookManager {
     
     public function __construct() {
         try {
-            $this->pdo = new PDO("pgsql:host=localhost;port=5432;dbname=mediatheque;user=postgres;password=bddcinema");
+            $this->pdo = new PDO("pgsql:host=ec2-52-205-45-219.compute-1.amazonaws.com;
+                                port=5432;
+                                dbname=df3dj3hddbqsvd;
+                                user=nwkhvvvmelwkuk;
+                                password=36481953a4951b40d9ff2496dfd22ae8085cd44e5f2dd93e30d2604d1c69bb47");
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         } catch (PDOException $e) {
