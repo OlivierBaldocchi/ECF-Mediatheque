@@ -1,5 +1,5 @@
 <?php 
-require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
+require 'https://ecf-mediatheque.herokuapp.com/base.html';
 ?>
 <body>
     <?php
@@ -8,7 +8,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php'; ?>    
+            <?php include_once 'https://ecf-mediatheque.herokuapp.com/Vues/MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
                 <?php include_once 'ButtonLogOut.php'; ?>

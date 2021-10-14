@@ -3,4 +3,4 @@
 session_start();
 session_destroy();
 session_unset();
-header("location:http://localhost/MEDIATHEQUE/Accueil.php");
+header("location:https://ecf-mediatheque.herokuapp.com/");

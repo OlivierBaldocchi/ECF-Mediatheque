@@ -4,10 +4,10 @@
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle btnmenu" type="button" data-toggle="dropdown">Menu</button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="index.php">Accueil</a>
-            <a class="dropdown-item" href="">Adresse</a>
-            <a class="dropdown-item" href="">Horaires</a>
-            <a class="dropdown-item" href="">Informations</a>
+            <a class="dropdown-item" href="https://ecf-mediatheque.herokuapp.com/">Accueil</a>
+            <a class="dropdown-item" href="https://ecf-mediatheque.herokuapp.com/">Adresse</a>
+            <a class="dropdown-item" href="https://ecf-mediatheque.herokuapp.com/">Horaires</a>
+            <a class="dropdown-item" href="https://ecf-mediatheque.herokuapp.com/">Informations</a>
         </div>
     </div>
 </div> 
