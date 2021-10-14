@@ -1,10 +1,10 @@
-<?php require_once 'C:\xampp\htdocs\MEDIATHEQUE\base.html';?>
+<?php require_once 'base.html';?>
 
 <body>
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php';?>   
+            <?php include_once 'Vues\MenuTitre.php';?>   
               
             <div class="col-3 col-md-2">
                 <form class="form_connexion" action="Modeles/Connection.php" method="post">
@@ -35,7 +35,7 @@
                     </form>                        
                 </div>
                 <div class="col-4">
-                    <?php require_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\BooksImage.php'; ?>                        
+                    <?php require_once 'Vues\BooksImage.php'; ?>                        
                 </div>                           
             </div>
         </div>         
