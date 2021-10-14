@@ -1,8 +1,10 @@
+
+
 <div class="col-4 col-md-2 menu">
     <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle btnmenu" type="button" data-toggle="dropdown">Menu</button>
         <div class="dropdown-menu">
-            <a class="dropdown-item" href="">Accueil</a>
+            <a class="dropdown-item" href="c:/xampp/htdocs/MEDIATHEQUE/Accueil.php">Accueil</a>
             <a class="dropdown-item" href="">Adresse</a>
             <a class="dropdown-item" href="">Horaires</a>
             <a class="dropdown-item" href="">Informations</a>

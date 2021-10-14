@@ -27,4 +27,3 @@ $empruntManager = new EmpruntManager();
 
 $list = $empruntManager->readAll();
 
- 

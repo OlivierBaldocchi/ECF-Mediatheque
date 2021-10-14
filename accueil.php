@@ -7,7 +7,7 @@
             <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php';?>   
               
             <div class="col-3 col-md-2">
-                <form class="form_connexion" action="Controleurs/ControlConnection.php" method="post">
+                <form class="form_connexion" action="Modeles/Connection.php" method="post">
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">
                     </div>

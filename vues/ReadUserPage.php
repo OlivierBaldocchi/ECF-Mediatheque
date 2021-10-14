@@ -1,5 +1,7 @@
 <?php 
 require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
+session_start();
+if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role'] === 'ADMIN') {
 ?>
 
 <body>
@@ -8,8 +10,8 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
             
             <?php include_once 'C:\xampp\htdocs\MEDIATHEQUE\Vues\MenuTitre.php'; ?>    
               
-            <div class="col-3 col-md-2">
-                
+            <div class="col-3 col-md-2 m-4">
+                <?php include_once 'ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>
@@ -22,8 +24,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
                 <div class="col-3 mt-5 infos">
                     <p class="little">Profil utilisateur</p>
                     <?php
-                    session_start();
-                   
+                                   
                     if ($_POST) {
                         $_SESSION['emailToRead'] = $_POST['list_email'];
                     }                     
@@ -94,6 +95,11 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
             </div>
         </div>         
     </main>
+    <?php
+    } else {
+        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+    }
+    ?>
 </body>
         
  

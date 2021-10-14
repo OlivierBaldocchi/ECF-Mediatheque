@@ -1,6 +1,8 @@
 <?php
 
-require_once '../Controleurs/ControlWaitingList.php';
+require_once '../Controleurs/ControlUser.php';
+
+
 
 try {
     $users = $userManager->readAll();

@@ -11,4 +11,3 @@ $useManager = new UserManager();
 
 
 $finds = $useManager->search($_POST['email'].'%');
-

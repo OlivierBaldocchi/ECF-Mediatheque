@@ -7,9 +7,4 @@ use Modeles\User;
 use Modeles\UserManager; 
 
 $user = new User();
-
 $userManager = new UserManager();
-
-$user = $userManager->read($_POST['email']); 
-
-require_once '../Modeles/Connection.php'; 

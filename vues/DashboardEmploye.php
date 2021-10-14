@@ -68,7 +68,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
                             </div> 
                         </form>    
                     </div>
-                </div>
+                </div> 
             </div>         
         </main>
         <?php

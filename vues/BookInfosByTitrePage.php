@@ -1,7 +1,7 @@
 <?php 
 require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
 session_start();
-
+if (isset($_SESSION['role'])) {
 ?>
 
 <body>
@@ -59,4 +59,9 @@ session_start();
             </div>
         </div>         
     </main>
+    <?php
+    } else {
+        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+    }
+    ?>
 </body>

@@ -17,3 +17,7 @@ $book->setTitre($_POST['titre'])
 $bookmanager = new bookManager();
 
 $createOk = $bookmanager->create($book);     
+
+if($createOk) {
+    echo 'Bravo le nouveau livre est enregistré.';
+}

@@ -28,7 +28,7 @@ require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
                     require_once '../Controleurs/ControlReadUser.php';
                     
                     ?>
-                    <form action="../Vues/ConfirmRolePage.php" method="post">
+                    <form action="../Modeles/ConfirmRole.php" method="post">
                         <div class="mt-3">
                             <p>Accorder un rôle à: <?php echo $read->getNom() .' '. $read->getPrenom() ?> </p>
                         </div>    

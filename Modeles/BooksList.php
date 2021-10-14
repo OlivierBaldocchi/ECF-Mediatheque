@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Controleurs/ControlBooksList.php';
+require_once '../Controleurs/ControlBook.php';
 
 try {
     $books = $bookManager->readAll();
@@ -30,4 +30,3 @@ try {
 } catch (PDOException $e) {
     echo 'Impossible de récupérer la liste des livres';
 }
-

@@ -1,6 +1,7 @@
 <?php 
 require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
 session_start();
+if (isset($_SESSION['role'])) {
 ?>
 
 <body>
@@ -37,21 +38,7 @@ session_start();
                         }                     
                         ?>
                     </div> 
-                    <div class="col-3">
-                        <?php 
-                        
-                        /*
-                        $_SESSION['bookToReserv'] = $_GET['id'];
-                        if ($_GET['dispo'] == 1) { ?>
-                            <form action="ReservBookPage.php">
-                                <p>Vous pouvez réserver ce livre, puis vous
-                                devrez venir le récuperer dans les 3 jours.</p>
-                                <div class="m-5">
-                                    <button class="button1" type="submit">Réserver ce livre</button>
-                                </div>                                
-                            </form>
-                            <?php } */ ?>                        
-                    </div>  
+                    
                     <div class="col-4">
                         <?php require_once 'BooksImage.php'; ?>                        
                     </div>                  
@@ -59,4 +46,9 @@ session_start();
             </div>
         </div>         
     </main>
+    <?php
+    } else {
+        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+    }
+    ?>
 </body>

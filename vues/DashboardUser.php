@@ -1,7 +1,6 @@
 <?php 
 require 'C:\xampp\htdocs\MEDIATHEQUE\base.html';
 ?>
-
 <body>
     <?php
     if (isset($_SESSION['role']) and $_SESSION['role'] === 'INSCR') {
