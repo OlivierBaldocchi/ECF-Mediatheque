@@ -4,7 +4,7 @@
     <header class="container-fluid">
         <div class="row title">
             
-        <?php include_once '../Vues/MenuTitre.php';?>  
+        <?php include_once 'MenuTitre.php';?>  
               
         </div>        
     </header>
@@ -31,7 +31,7 @@
                     </form>    
                 </div> 
                 <div class="col-4">
-                    <?php require_once '../Vues/BooksImage.php'; ?>                        
+                    <?php require_once 'BooksImage.php'; ?>                        
                 </div>
             </div>
         </div>         
