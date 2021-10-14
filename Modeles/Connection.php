@@ -1,4 +1,4 @@
-<?php require 'https://ecf-mediatheque.herokuapp.com/base.html';
+<?php require '../base.html';
 
 require_once '../Controleurs/ControlUser.php';
 
