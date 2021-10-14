@@ -4,7 +4,7 @@
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'Vues/MenuTitre.php';?>   
+            <?php include_once '../Vues/MenuTitre.php';?>   
               
             <div class="col-3 col-md-2">
                 <form class="form_connexion" action="Modeles/Connection.php" method="post">

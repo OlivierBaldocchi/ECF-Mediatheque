@@ -1,10 +1,10 @@
-<?php require 'https://ecf-mediatheque.herokuapp.com/base.html';?>
+<?php require '../base.html';?>
 
 <body>
     <header class="container-fluid">
         <div class="row title">
             
-        <?php include_once 'https://ecf-mediatheque.herokuapp.com/Vues/MenuTitre.php';?>  
+        <?php include_once '../Vues/MenuTitre.php';?>  
               
         </div>        
     </header>
@@ -31,7 +31,7 @@
                     </form>    
                 </div> 
                 <div class="col-4">
-                    <?php require_once 'https://ecf-mediatheque.herokuapp.com/Vues/BooksImage.php'; ?>                        
+                    <?php require_once '../Vues/BooksImage.php'; ?>                        
                 </div>
             </div>
         </div>         
