@@ -8,10 +8,10 @@ require '../base.html';
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'MenuTitre.php'; ?>    
+            <?php include_once '../Vues/MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
-                <?php include_once 'ButtonLogOut.php'; ?>
+                <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>
@@ -25,7 +25,7 @@ require '../base.html';
                     <div class="mt-5">
                         <?php require_once '../Modeles/BooksListJava.php'; ?>
 
-                        <form action="BookInfosByTitrePage.php" method="post">                            
+                        <form action="../Vues/BookInfosByTitrePage.php" method="post">                            
                             <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
                             <div id="suggestions" style="font-size:1vw"></div>
                             <div>
@@ -109,7 +109,7 @@ require '../base.html';
                 </div>
 
                 <div class="col-3 mt-5">
-                    <form action="BooksListPage.php">
+                    <form action="../Vues/BooksListPage.php">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
                     </form>

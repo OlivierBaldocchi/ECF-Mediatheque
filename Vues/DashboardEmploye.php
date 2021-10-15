@@ -11,10 +11,10 @@ require '../base.html';
         <header class="container-fluid">
             <div class="row title">
                 
-            <?php include_once 'MenuTitre.php';?>    
+            <?php include_once '../VuesMenuTitre.php';?>    
                
                 <div class="col-3 col-md-2 m-4">
-                    <?php include_once 'ButtonLogOut.php'; ?>
+                    <?php include_once '../VuesButtonLogOut.php'; ?>
                 </div>
             </div>       
         </header>
@@ -53,7 +53,7 @@ require '../base.html';
                     </div>
                     
                     <div class="col-3 mt-5">
-                        <form action="BooksListPage.php">
+                        <form action="../Vues/BooksListPage.php">
                             <p class="little">Liste des livres</p>
                             <button class="button2" type="submit">Cliquez ici</button>
                         </form>
