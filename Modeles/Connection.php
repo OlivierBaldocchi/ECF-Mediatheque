@@ -1,4 +1,5 @@
-<?php require '../base.html';
+<?php 
+require_once '../base.html';
 
 require_once '../Controleurs/ControlUser.php';
 
@@ -11,7 +12,7 @@ if ($user === null) {
     ?>
         <script type='text/javascript'>
             alert("Votre compte n'a pas encore été validé. Vous recevrez bientôt un email de confirmation, merci.");
-            window.location = '../accueil.php';
+            window.location = '../index.php';
         </script>
     <?php 
     } else { 

@@ -1,6 +1,6 @@
 <?php 
 require '../base.html';
-?>
+?> 
 
 <body>
     <?php
@@ -11,7 +11,7 @@ require '../base.html';
         <header class="container-fluid">
             <div class="row title">
                 
-            <?php include_once '../Vues/MenuTitre.php';?>    
+            <?php include_once 'MenuTitre.php';?>    
                
                 <div class="col-3 col-md-2 m-4">
                     <?php include_once 'ButtonLogOut.php'; ?>
@@ -53,7 +53,7 @@ require '../base.html';
                     </div>
                     
                     <div class="col-3 mt-5">
-                        <form action="../Vues/BooksListPage.php">
+                        <form action="BooksListPage.php">
                             <p class="little">Liste des livres</p>
                             <button class="button2" type="submit">Cliquez ici</button>
                         </form>

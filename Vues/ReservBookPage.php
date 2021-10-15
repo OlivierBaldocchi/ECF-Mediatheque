@@ -1,5 +1,5 @@
 <?php 
-require 'https://ecf-mediatheque.herokuapp.com/base.html'; 
+require '../base.html'; 
 if (isset($_SESSION['role'])) {
 session_start(); ?>
 
@@ -7,7 +7,7 @@ session_start(); ?>
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'https://ecf-mediatheque.herokuapp.com/Vues/MenuTitre.php'; ?>    
+            <?php include_once 'MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
                 <?php include_once 'ButtonLogOut.php'; ?>
@@ -35,7 +35,7 @@ session_start(); ?>
                     ?>
                 </div>
                 <div class="col-4"> 
-                    <?php require_once 'https://ecf-mediatheque.herokuapp.com/Vues/BooksImage.php'; ?>                
+                    <?php require_once 'BooksImage.php'; ?>                
                 </div>
             </div>
         </div>         

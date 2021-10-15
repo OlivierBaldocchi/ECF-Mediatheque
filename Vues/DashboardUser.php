@@ -1,5 +1,5 @@
 <?php 
-require 'https://ecf-mediatheque.herokuapp.com/base.html';
+require '../base.html';
 ?>
 <body>
     <?php
@@ -8,7 +8,7 @@ require 'https://ecf-mediatheque.herokuapp.com/base.html';
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'https://ecf-mediatheque.herokuapp.com/Vues/MenuTitre.php'; ?>    
+            <?php include_once 'MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
                 <?php include_once 'ButtonLogOut.php'; ?>
@@ -25,7 +25,7 @@ require 'https://ecf-mediatheque.herokuapp.com/base.html';
                     <div class="mt-5">
                         <?php require_once '../Modeles/BooksListJava.php'; ?>
 
-                        <form action="../Vues/BookInfosByTitrePage.php" method="post">                            
+                        <form action="BookInfosByTitrePage.php" method="post">                            
                             <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
                             <div id="suggestions" style="font-size:1vw"></div>
                             <div>
@@ -109,7 +109,7 @@ require 'https://ecf-mediatheque.herokuapp.com/base.html';
                 </div>
 
                 <div class="col-3 mt-5">
-                    <form action="../Vues/BooksListPage.php">
+                    <form action="BooksListPage.php">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
                     </form>
