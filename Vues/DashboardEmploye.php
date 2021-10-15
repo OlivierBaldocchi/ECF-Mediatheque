@@ -1,23 +1,19 @@
-<?php 
-require '../base.html';
-?> 
+<?php require '../base.html'; ?> 
 
 <body>
     <?php
-    
     if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL') {
-        
         ?>
-        <header class="container-fluid">
-            <div class="row title">
-                
-            <?php include_once '../VuesMenuTitre.php';?>    
-               
-                <div class="col-3 col-md-2 m-4">
-                    <?php include_once '../VuesButtonLogOut.php'; ?>
-                </div>
-            </div>       
-        </header>
+    <header class="container-fluid">
+        <div class="row title">
+            
+            <?php include_once '../Vues/MenuTitre.php';?>    
+            
+            <div class="col-3 col-md-2 m-4">
+                <?php include_once '../Vues/ButtonLogOut.php'; ?>
+            </div>
+        </div>       
+    </header>
 
         <main>
             <div class="container">    

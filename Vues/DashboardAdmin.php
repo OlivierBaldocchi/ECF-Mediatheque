@@ -1,4 +1,4 @@
-<?php require '../base.html';?>
+<?php require '../base.html';?> 
 
 <body>
     <?php
