@@ -42,7 +42,7 @@ if (isset($_SESSION['role'])) {
                         $_SESSION['bookToReserv'] = $_GET['id'];
                         if ($_GET['dispo'] == 1) { ?>
                             <form action="ReservBookPage.php">
-                                <p>Vous pouvez réserver ce livre, puis vous
+                                <p class="little">Vous pouvez réserver ce livre, puis vous
                                 devrez venir le récuperer dans les 3 jours.</p>
                                 <div class="m-5">
                                     <button class="button1" type="submit">Réserver ce livre</button>

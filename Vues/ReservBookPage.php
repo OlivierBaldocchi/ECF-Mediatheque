@@ -1,7 +1,8 @@
 <?php 
 require '../base.html'; 
+session_start();
 if (isset($_SESSION['role'])) {
-session_start(); ?>
+ ?>
 
 <body>
     <header class="container-fluid">
