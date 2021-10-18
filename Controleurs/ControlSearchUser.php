@@ -1,6 +1,5 @@
 <?php
 
-
 require_once '../Modeles/User.php';
 require_once '../Modeles/UserManager.php';
 

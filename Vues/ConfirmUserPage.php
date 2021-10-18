@@ -1,5 +1,8 @@
 <?php 
 require '../base.html';
+session_start();
+$token = $_SESSION['token'];  
+require_once '../Modeles/Token.php';
 ?>
 
 <body>

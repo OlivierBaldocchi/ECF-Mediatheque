@@ -17,7 +17,7 @@ if ($user === null) {
     <?php 
     } else { 
         if (password_verify($_POST['password'], $user->getMdp())) {
-            
+            session_start();
             $_SESSION['login'] = $user->getEmail();
             $_SESSION['id'] = $user->getId();
             $_SESSION['token'] = md5(time() * rand(142, 628));

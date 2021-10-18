@@ -1,7 +1,10 @@
 <?php 
 require '../base.html';
 session_start();
-if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role'] === 'ADMIN') {
+$token = $_SESSION['token'];  
+require_once '../Modeles/Token.php';
+
+if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
 ?>
 
 <body>
@@ -21,7 +24,7 @@ if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role
             <div class="row"> 
                 <div class="col-1 col-xl-0">
                 </div>
-                <div class="col-10 col-xl-4 mt-5 infos">
+                <div class="col-10 col-xl-3 mt-5 infos">
                     <p class="little">Profil utilisateur</p>
                     <?php
                                    

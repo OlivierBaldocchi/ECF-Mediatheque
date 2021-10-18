@@ -27,7 +27,7 @@
 
                         <form action="../Vues/BookInfosByTitrePage.php" method="post">                               
                         <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
-                        <div id="suggestions" style="font-size:2vw"></div>
+                        <div id="suggestions" style="font-size:1.5vw"></div>
                             <div>
                                 <button class='button2 mt-5' type="submit">Voir</button>
                             </div>  

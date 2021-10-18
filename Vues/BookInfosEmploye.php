@@ -1,7 +1,10 @@
 <?php 
 require '../base.html';
 session_start();
-if (isset($_SESSION['role']) && $_SESSION['token'] === $_POST['token']) {
+$token = $_SESSION['token'];  
+require_once '../Modeles/Token.php';
+
+if (isset($_SESSION['role']) {
 ?>
 
 <body>
