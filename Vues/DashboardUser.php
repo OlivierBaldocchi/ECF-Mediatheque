@@ -1,9 +1,8 @@
-<?php 
-require '../base.html';
+<?php require '../base.html';?>
 
-?>
 <body>
     <?php
+    
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'INSCR' && $_SESSION['token'] === $token) {
         ?>
     <header class="container-fluid">

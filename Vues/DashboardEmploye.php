@@ -3,10 +3,11 @@
 <body>
     <?php
     
-    if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' && $_SESSION['token'] === $token)) {
+    if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' && $_SESSION['token'] === $token) {
         ?>
     <header class="container-fluid">
         <div class="row title">
+
             <?php include_once '../Vues/MenuTitre.php';?>
             
             <div class="col-10 col-lg-5 col-xl-2 m-4">

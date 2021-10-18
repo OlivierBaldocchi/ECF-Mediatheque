@@ -2,7 +2,8 @@
 
 <body>
     <?php
-    if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN' && $_SESSION['token'] === $token)) {
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN' && $_SESSION['token'] === $token) {
+        include_once '../Controleurs/ControlAutomaticChecks.php';
         ?>
     <header class="container-fluid">
         <div class="row title">

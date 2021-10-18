@@ -15,5 +15,3 @@ try {
     echo 'Impossible de mettre à jour les réservations';
 }
 
-
-require_once '../Vues/DashboardAdmin.php';

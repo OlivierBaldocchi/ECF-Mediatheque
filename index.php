@@ -34,7 +34,7 @@
                         <button class="button2" type="submit">S'inscrire</button>  
                     </form>                        
                 </div>
-                <div class="col-5 col-sm-5">
+                <div class="col-5 col-sm-5 mt-5">
                     <?php require_once 'Vues/BooksImage.php'; ?>                        
                 </div>                           
             </div>
