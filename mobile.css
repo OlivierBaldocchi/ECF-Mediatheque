@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
 .menu {
-    margin-top: 5vh;
+    margin-top: 1vh;
     margin-left: 3vw;
 }
 
@@ -20,7 +20,7 @@ a {
 }
 
 .title {
-    height: 50vh;
+    height: auto;
     background-color: #4e95d8;
     margin: 1vw;
 }
@@ -33,15 +33,9 @@ h1 {
     margin-left: 12vw;
 }
 
-.form_connexion {
-    position: absolute;
-    top: 22vh;
-    left: 10vw;
-}
-
 input {
-    width: 35vw;
-    font-size: 4vw;
+    width:60vw;
+    font-size: 3vw;
     font-family: 'Architects Daughter', cursive;
     padding-left: 0.5vw;
     color: black;
@@ -58,7 +52,7 @@ input {
 }
 
 .little {
-    font-size: 10vw;
+    font-size: 8vw;
     font-family: 'Architects Daughter', cursive;
     margin-top: 3vh;
     color: #4e95d8;
@@ -69,8 +63,9 @@ input {
     color: white;
     font-family: 'Architects Daughter', cursive;
     border-radius: 10px;
-    font-size: 2.5vw;
+    font-size: 3vw;
     width: 30vw;
+    height: 15vh;
 }
 
 .button_inscr {

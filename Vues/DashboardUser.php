@@ -108,7 +108,7 @@ require '../base.html';
                     }    ?>
                 </div>
 
-                <div class="col-md-6 col-xl-3 mt-5">
+                <div class="col-md-6 col-xl-3 mt-5 mb-5">
                     <form action="../Vues/BooksListPage.php">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
