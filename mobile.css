@@ -20,7 +20,7 @@ a {
 }
 
 .title {
-    height: 40vh;
+    height: 50vh;
     background-color: #4e95d8;
     margin: 1vw;
 }
@@ -58,7 +58,7 @@ input {
 }
 
 .little {
-    font-size: 4vw;
+    font-size: 10vw;
     font-family: 'Architects Daughter', cursive;
     margin-top: 3vh;
     color: #4e95d8;
@@ -84,11 +84,15 @@ input {
 
 .infos {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1vw;
+    font-size: 8vw;
     font-weight: 300;
 }
 
 .suggestion:hover {
     background-color: cornflowerblue;
     color: white
+}
+
+.logout {
+    font-size: 5vw;
 }

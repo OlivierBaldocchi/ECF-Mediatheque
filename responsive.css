@@ -8,16 +8,21 @@
 @media screen and (min-width: 768px) {
 
     h1 {
-        margin-left: 35vw;
+        margin-left: 30vw;
     }
     
+    .btnmenu {
+        width: 15vw;
+        font-size: 3vw;
+    }
+
     .form_connexion {
         left: 8%;
     }
 
     input {
         width: 35vw;
-        font-size: 4vw;
+        font-size: 2.5vw;
     }
 
     .button1 {
@@ -26,10 +31,21 @@
         height: 5vh;
     }
 
+    .little {
+        font-size: 3vw;
+    }
+
+    .logout {
+        font-size: 3vw;
+    }
 }   
 
 
 @media screen and (min-width: 990px) {
+    .btnmenu {
+        width: 5vw;
+        font-size: 1.3vw;
+    }
     
     h1 {
         font-size: 3vw;
@@ -48,11 +64,7 @@
 
 
 @media screen and (min-width: 1200px) {   
-    .btnmenu {
-        width: 6vw;
-        font-size: 1.3vw;
-    }
-    
+        
     a {
         font-size: 1vw;
     }

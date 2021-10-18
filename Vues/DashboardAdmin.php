@@ -9,7 +9,7 @@
             
             <?php include_once '../Vues/MenuTitre.php';?>
                             
-            <div class="col-3 col-md-2 m-4">
+            <div class="col-10 col-lg-5 col-xl-3 m-4">
                 <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
@@ -18,7 +18,7 @@
     <main>
         <div class="container">    
             <div class="row"> 
-                <div class="col-3 mt-5 ml-5"> 
+                <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
                     <form action="../Vues/ConfirmUserPage.php" method="post">
                         <p class="little">Liste des utilisateurs<br>non confirmés</p>
                         <div> 
@@ -33,7 +33,7 @@
                         </div>
                     </form> 
                 </div>
-                <div class="col-3 mt-5">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <form action="../Vues/ReadUserPage.php" method="post">
                         <p class="little">Liste de tous<br>les utilisateurs</p>
                         <div>
@@ -48,13 +48,13 @@
                         </div>
                     </form>                       
                 </div>
-                <div class="col-3 mt-5">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <form action="../Vues/BooksListPage.php">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
                     </form>
                 </div>
-                <div class="col-3 mt-5">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Rechercher<br>un utilisateur</p>
                     <form action="../Controleurs/ControlSearchUser.php" method="post">                            
                         <input type="text" placeholder="email" id="email" name="email">

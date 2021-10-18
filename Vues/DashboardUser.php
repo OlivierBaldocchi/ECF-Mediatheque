@@ -10,7 +10,7 @@ require '../base.html';
             
             <?php include_once '../Vues/MenuTitre.php'; ?>    
               
-            <div class="col-3 col-md-2 m-4">
+            <div class="col-10 col-lg-5 col-xl-3 m-4">
                 <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
@@ -20,7 +20,7 @@ require '../base.html';
         <div class="container">    
             <div class="row"> 
                               
-                <div class="col-5 mt-2">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Rechercher un livre</p>
                     <div class="mt-5">
                         <?php require_once '../Modeles/BooksListJava.php'; ?>
@@ -34,7 +34,7 @@ require '../base.html';
                         </form>                       
                     </div>                    
                             <script type='text/javascript'>
-                                <?php echo "var list = '".implode("<>", $titres)."'.split('<>');"; ?>
+                                <?php echo "list = '".implode("<>", $titres)."'.split('<>');"; ?>
                                                                                 
                                 const searchinput = document.getElementById('searchInput');
 
@@ -61,7 +61,7 @@ require '../base.html';
                                 
                             </script>                    
                 </div>
-                <div class="col-4 mt-3">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Mes livres réservés</p>
                     <?php 
                     $id = $_SESSION['id'];
@@ -76,7 +76,7 @@ require '../base.html';
                     ?>
                 </div>
 
-                <div class="col-3 mt-3">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Mes livres empruntés</p>
                     <?php
                     $id = $_SESSION['id'];
@@ -108,7 +108,7 @@ require '../base.html';
                     }    ?>
                 </div>
 
-                <div class="col-3 mt-5">
+                <div class="col-md-6 col-xl-3 mt-5">
                     <form action="../Vues/BooksListPage.php">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>

@@ -6,10 +6,9 @@
         ?>
     <header class="container-fluid">
         <div class="row title">
+            <?php include_once '../Vues/MenuTitre.php';?>
             
-            <?php include_once '../Vues/MenuTitre.php';?>    
-            
-            <div class="col-3 col-md-2 m-4">
+            <div class="col-10 col-lg-5 col-xl-3 m-4">
                 <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
@@ -19,7 +18,7 @@
             <div class="container">    
                 <div class="row"> 
                     
-                    <div>
+                    <div class="col-10">
                         <p class="little">Ajouter un livre</p>
                         <form action="../Controleurs/ControlCreateBook.php" method="post">
                             <input type="text" placeholder="titre" id="titre" name="titre">
@@ -30,7 +29,7 @@
                         </form>
                     </div>
 
-                    <div class="col-6 mt-5 ml-5 infos"> 
+                    <div class="col-10 mt-5 ml-5 infos"> 
                         <p class="little">Informations livres réservés</p> 
 
                         <?php include_once '../Controleurs/ControlReservedBooksList.php'; 
@@ -48,14 +47,14 @@
                         ?>
                     </div>
                     
-                    <div class="col-3 mt-5">
+                    <div class="col-10 mt-5">
                         <form action="../Vues/BooksListPage.php">
                             <p class="little">Liste des livres</p>
                             <button class="button2" type="submit">Cliquez ici</button>
                         </form>
                     </div>
 
-                    <div class="col-3 mt-5">
+                    <div class="col-10 col-xl-3 mt-5">
                         <p class="little">Rechercher<br>un utilisateur</p>
                         <form action="../Controleurs/ControlSearchUser.php" method="post">                            
                             <input type="text" placeholder="email" id="email" name="email">
