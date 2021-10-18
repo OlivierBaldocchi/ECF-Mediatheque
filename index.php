@@ -6,7 +6,7 @@
             
             <?php include_once 'Vues/MenuTitre.php';?>   
               
-            <div class="col-5 col-md-2">
+            <div class="col-5 col-md-2 mt-3">
                 <form class="form_connexion" action="Modeles/Connection.php" method="post">
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">

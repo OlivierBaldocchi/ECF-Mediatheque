@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../Modeles/User.php';
 require_once '../Modeles/UserManager.php';
 
@@ -11,4 +12,4 @@ $userManager = new UserManager();
 
 $email = $_SESSION['emailToRead'];
 
-$read = $userManager->read($email);    
+$read = $userManager->read($email);        

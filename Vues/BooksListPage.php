@@ -1,6 +1,7 @@
 <?php 
 require '../base.html';
 session_start();
+
 if (isset($_SESSION['role'])) {
 ?>
 
@@ -19,20 +20,20 @@ if (isset($_SESSION['role'])) {
     <main>
         <div class="container">    
             <div class="row"> 
-                <div class="col-1"></div>          
-                <div class="col-7 little">
+                <div class="col-xl-1"></div>          
+                <div class="col-11 col-xl-7 little">
                     
                     <?php require_once '../Modeles/BooksList.php'; ?>
                 </div>  
-                <div class="col-3">
+                <div class="col-xl-3">
                     <?php require_once 'BooksImage.php'; ?>
                 </div>       
             </div> 
         </div>         
     </main>
     <?php
-    } else {
-        echo 'Vous n\'êtes pas autorisé à acceder à cette page';
-    }
+} else {
+    echo 'Vous n\'êtes pas autorisé à acceder à cette page';
+}
     ?>
 </body>

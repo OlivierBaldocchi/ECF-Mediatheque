@@ -19,7 +19,7 @@ require '../base.html';
             <div class="row"> 
                 <div class="col-1">                   
                 </div>
-                <div class="col-5 little">
+                <div class="col-10 col-md-6 little">
                     <?php
                     session_start();
                     
@@ -49,7 +49,7 @@ require '../base.html';
                         </div>
                     </form> 
                 </div> 
-                <div class="col-4">
+                <div class="col-0 col-md-5">
                     <?php require_once 'BooksImage.php'; ?>                        
                 </div>                                      
             </div>

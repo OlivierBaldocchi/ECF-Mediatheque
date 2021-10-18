@@ -16,7 +16,7 @@
                 <div class="col-1">
                     
                 </div>
-                <div class="col-5 little">
+                <div class="col-10 col-sm-5 little">
                     <form action="WaitingInscription.php" method="post">
                         <p>Veuillez entrer vos informations <br>ci-dessous s'il vous plait</p><br>
                         <input type="text" placeholder="nom" id="nom" name="nom">                          
@@ -33,7 +33,7 @@
                         <p class="little">Aprés validation de votre inscription<br>vous pourrez vous connecter.</p>
                     </form>    
                 </div> 
-                <div class="col-4">
+                <div class="col-5 col-sm-4">
                     <?php require_once 'BooksImage.php'; ?>                        
                 </div>
             </div>

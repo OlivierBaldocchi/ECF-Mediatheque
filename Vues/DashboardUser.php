@@ -1,16 +1,17 @@
 <?php 
 require '../base.html';
+
 ?>
 <body>
     <?php
-    if (isset($_SESSION['role']) and $_SESSION['role'] === 'INSCR') {
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'INSCR' && $_SESSION['token'] === $token) {
         ?>
     <header class="container-fluid">
         <div class="row title">
             
             <?php include_once '../Vues/MenuTitre.php'; ?>    
               
-            <div class="col-10 col-lg-5 col-xl-3 m-4">
+            <div class="col-10 col-lg-5 col-xl-2 m-4">
                 <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
@@ -25,9 +26,9 @@ require '../base.html';
                     <div class="mt-5">
                         <?php require_once '../Modeles/BooksListJava.php'; ?>
 
-                        <form action="../Vues/BookInfosByTitrePage.php" method="post">                            
-                            <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
-                            <div id="suggestions" style="font-size:1vw"></div>
+                        <form action="../Vues/BookInfosByTitrePage.php" method="post">                               
+                        <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
+                        <div id="suggestions" style="font-size:2vw"></div>
                             <div>
                                 <button class='button2 mt-5' type="submit">Voir</button>
                             </div>  

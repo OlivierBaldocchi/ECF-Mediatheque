@@ -21,7 +21,7 @@ if (isset($_SESSION['role'])) {
         <div class="container">    
             <div class="row"> 
                 <div class="col-1"> </div>
-                <div class="col-4  mt-5">
+                <div class="col-5  mt-5">
                     <?php 
                     
                     require_once '../Controleurs/ControlReservBook.php';
@@ -35,7 +35,7 @@ if (isset($_SESSION['role'])) {
                     }
                     ?>
                 </div>
-                <div class="col-4"> 
+                <div class="col-5"> 
                     <?php require_once 'BooksImage.php'; ?>                
                 </div>
             </div>

@@ -2,14 +2,14 @@
 
 <body>
     <?php
-    if (isset($_SESSION['role']) and $_SESSION['role'] === 'ADMIN') {
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN' && $_SESSION['token'] === $token)) {
         ?>
     <header class="container-fluid">
         <div class="row title">
             
             <?php include_once '../Vues/MenuTitre.php';?>
                             
-            <div class="col-10 col-lg-5 col-xl-3 m-4">
+            <div class="col-10 col-lg-5 col-xl-2 m-4">
                 <?php include_once '../Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       

@@ -19,9 +19,9 @@ if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role
     <main>
         <div class="container">    
             <div class="row"> 
-                <div class="col-1">
+                <div class="col-1 col-xl-0">
                 </div>
-                <div class="col-3 mt-5 infos">
+                <div class="col-10 col-xl-4 mt-5 infos">
                     <p class="little">Profil utilisateur</p>
                     <?php
                                    
@@ -42,7 +42,7 @@ if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role
                     } 
                     ?>   
                 </div>
-                <div class="col-4 mt-5 infos">
+                <div class="col-10 col-xl-4 mt-5 infos">
                     <p class="little">Livres réservés</p>
                     <?php
                     $id = $read->getId();
@@ -60,7 +60,7 @@ if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' or $_SESSION['role
                     } ?>
                 </div>                     
                 
-                <div class="col-4 mt-5 infos">
+                <div class="col-10 col-xl-4 mt-5 infos">
                     <p class="little">Livres empruntés</p>
                     <?php
                     $id = $read->getId();

@@ -20,7 +20,7 @@ if (isset($_SESSION['role'])) {
         <div class="container">    
             <div class="row mt-5"> 
                     <div class="col-1"></div>
-                    <div class="col-4 mb-5 infos">
+                    <div class="col-11 col-md-6 col-xl-3 mt-5 infos">
                         <?php  
                         require_once '../Controleurs/ControlReadBook.php';  
 
@@ -37,7 +37,7 @@ if (isset($_SESSION['role'])) {
                         }                     
                         ?>
                     </div> 
-                    <div class="col-3">
+                    <div class="col-5 col-md-6 col-xl-4">
                         <?php
                         $_SESSION['bookToReserv'] = $_GET['id'];
                         if ($_GET['dispo'] == 1) { ?>
@@ -50,7 +50,7 @@ if (isset($_SESSION['role'])) {
                             </form>
                             <?php } ?>                        
                     </div>  
-                    <div class="col-4">
+                    <div class="col-5 col-md-6 col-xl-3">
                         <?php require_once 'BooksImage.php'; ?>                        
                     </div>                  
                 </div>

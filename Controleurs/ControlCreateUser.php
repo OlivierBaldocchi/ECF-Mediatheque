@@ -17,4 +17,6 @@ $user->setNom($_POST['nom'])
     
 $userManager = new UserManager();
 
-$createOk = $userManager->create($user);     
+$createOk = $userManager->create($user);       
+
+  

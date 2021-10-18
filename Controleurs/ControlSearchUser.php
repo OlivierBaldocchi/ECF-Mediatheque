@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../Modeles/User.php';
 require_once '../Modeles/UserManager.php';
 
@@ -11,3 +12,4 @@ $useManager = new UserManager();
 
 
 $finds = $useManager->search($_POST['email'].'%');
+    

@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../Modeles/Book.php';
 require_once '../Modeles/BookManager.php';
 require_once '../Modeles/Emprunt.php';
@@ -22,4 +23,4 @@ $cancel = $empruntManager->delete($_GET['book']);
 
 $retour = $bookManager->retour($_GET['book']);
 
-echo 'retour effectué';
+echo 'retour effectué';    

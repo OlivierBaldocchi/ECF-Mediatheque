@@ -18,21 +18,22 @@ if ($user === null) {
     } else { 
         if (password_verify($_POST['password'], $user->getMdp())) {
             
-            session_start();
             $_SESSION['login'] = $user->getEmail();
             $_SESSION['id'] = $user->getId();
+            $_SESSION['token'] = md5(time() * rand(142, 628));
+            $token = $_SESSION['token'];
            
             if ($user->getRole() === 'ADMIN') {
                 $_SESSION['role'] = 'ADMIN'; 
-                include_once '../Controleurs/ControlAutomaticChecks.php';                    
+                require_once '../Controleurs/ControlAutomaticChecks.php';                    
             }
             elseif ($user->getRole() === 'EMPL') {
                 $_SESSION['role'] = 'EMPL'; 
-                 include_once '../Vues/DashboardEmploye.php';  
+                 require_once '../Vues/DashboardEmploye.php';  
             }
             elseif ($user->getRole() === 'INSCR') {
                 $_SESSION['role'] = 'INSCR'; 
-                include_once '../Vues/DashboardUser.php';
+                require_once '../Vues/DashboardUser.php';
             }                
         } else {
             echo 'Identifiants Invalides';

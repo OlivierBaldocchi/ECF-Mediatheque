@@ -20,7 +20,7 @@ if (isset($_SESSION['role'])) {
         <div class="container">    
             <div class="row mt-5"> 
                     <div class="col-1"></div>
-                    <div class="col-4 mb-5 info">
+                    <div class="col-md-7 col-xl-3 mt-5 infos">
                         <?php  
                         require_once '../Controleurs/ControlReadByTitreBook.php';  
 
@@ -39,7 +39,7 @@ if (isset($_SESSION['role'])) {
                         }                     
                         ?>
                     </div> 
-                    <div class="col-3">
+                    <div class="col-md-4 col-xl-3 mt-5">
                         <?php
                         $_SESSION['bookToReserv'] = $id;
                         if ($dispo === 1) { ?>

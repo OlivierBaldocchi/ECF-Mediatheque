@@ -1,7 +1,7 @@
 <?php 
 require '../base.html';
 session_start();
-if (isset($_SESSION['role'])) {
+if (isset($_SESSION['role']) && $_SESSION['token'] === $_POST['token']) {
 ?>
 
 <body>
@@ -20,7 +20,7 @@ if (isset($_SESSION['role'])) {
         <div class="container">    
             <div class="row mt-5">  
                     <div class="col-1"></div> 
-                    <div class="col-4 mt-5 info">
+                    <div class="col-11 col-md-6 col-xl-3 mt-5 infos">
                         <?php 
                          
                         require_once '../Controleurs/ControlReadUser.php';  
@@ -39,7 +39,7 @@ if (isset($_SESSION['role'])) {
                         ?>
                     </div> 
                     
-                    <div class="col-4">
+                    <div class="col-0 col-md-4">
                         <?php require_once 'BooksImage.php'; ?>                        
                     </div>                  
                 </div>

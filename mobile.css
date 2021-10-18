@@ -34,7 +34,8 @@ h1 {
 }
 
 input {
-    width:60vw;
+    width:50vw;
+    height: 5vh;
     font-size: 3vw;
     font-family: 'Architects Daughter', cursive;
     padding-left: 0.5vw;
@@ -52,7 +53,7 @@ input {
 }
 
 .little {
-    font-size: 8vw;
+    font-size: 6vw;
     font-family: 'Architects Daughter', cursive;
     margin-top: 3vh;
     color: #4e95d8;
@@ -64,17 +65,8 @@ input {
     font-family: 'Architects Daughter', cursive;
     border-radius: 10px;
     font-size: 3vw;
-    width: 30vw;
-    height: 15vh;
-}
-
-.button_inscr {
-    background-color: orange;
-    color: white;
-    font-family: 'Architects Daughter', cursive;
-    border-radius: 10px;
-    font-size: 2.5vw;
-    width: 30vw;
+    width: 15vw;
+    height: 4vh;
 }
 
 .infos {

@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../Modeles/Book.php';
 require_once '../Modeles/BookManager.php';
 require_once '../Modeles/Emprunt.php';
@@ -27,4 +28,4 @@ $emprunt->setUtilisateurId($_GET['user'])
 
 $resa = $empruntManager->update($emprunt, $_GET['book']); 
 
-echo 'emprunt effectué';
+echo 'emprunt effectué';    

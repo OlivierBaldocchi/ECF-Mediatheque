@@ -11,6 +11,6 @@
     </div>
 </div> 
 
-<div class="col-8 col-md-5 col-lg-7 col-xl-6">
+<div class="col-8 col-md-5 col-lg-7 col-xl-7">
     <h1 class="mt-3">MEDIATHEQUE <br> La Chapelle-Curreaux</h1>
 </div>

@@ -70,6 +70,10 @@
 
 
 @media screen and (min-width: 1200px) {   
+    .btnmenu {
+        width: 7vw;
+        font-size: 1.3vw;
+    }
         
     a {
         font-size: 1vw;
@@ -85,7 +89,7 @@
     }
       
     input {
-        width: 12vw;
+        width: 10vw;
         font-size: 1vw;
         color: #000;
     }

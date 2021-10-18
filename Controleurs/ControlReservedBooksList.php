@@ -26,4 +26,5 @@ $emprunt = new Emprunt();
 $empruntManager = new EmpruntManager();
 
 $list = $empruntManager->readAll();
+    
 

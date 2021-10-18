@@ -7,7 +7,7 @@ use Modeles\Book;
 use Modeles\BookManager; 
 
 $book = new Book();
-        
+    
 $book->setTitre($_POST['titre'])
     ->setParution($_POST['parution'])
     ->setDescription($_POST['description'])

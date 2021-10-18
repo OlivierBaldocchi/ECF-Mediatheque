@@ -1,5 +1,6 @@
 <?php
 
+
 require_once '../Modeles/Book.php';
 require_once '../Modeles/BookManager.php';
 
@@ -12,4 +13,4 @@ $bookManager = new BookManager();
 $id = $_GET['id'];
 
 $read = $bookManager->read($id);     
-
+    

@@ -19,7 +19,7 @@ require '../base.html';
             <div class="row"> 
                 <div class="col-1"> 
                 </div>
-                <div class="col-5 little">
+                <div class="col-10 col-sm-5 little">
                     <p>
                     <?php
                     function validateDate($date, $format = 'Y-m-d') {
@@ -48,7 +48,7 @@ require '../base.html';
                     }   ?> 
                     </p> 
                 </div>                     
-                <div class="col-4">
+                <div class="col-5 col-sm-4">
                     <?php require_once 'BooksImage.php'; ?>                        
                 </div>
             </div>
