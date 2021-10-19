@@ -23,11 +23,11 @@ if (isset($_SESSION['role'])) {
         <div class="container">    
             <div class="row"> 
                 <div class="col-xl-1"></div>          
-                <div class="col-11 col-xl-7 little">
+                <div class="col-11 col-xl-7 mb-5 little">
                     
                     <?php require_once '../Modeles/BooksList.php'; ?>
                 </div>  
-                <div class="col-xl-3">
+                <div class="col-xl-3 mt-5 mb-5">
                     <?php require_once 'BooksImage.php'; ?>
                 </div>       
             </div> 

@@ -7,12 +7,12 @@
             <?php include_once 'Vues/MenuTitre.php';?>   
               
             <div class="col-5 col-md-2 mt-3">
-                <form class="form_connexion" action="Modeles/Connection.php" method="post">
+                <form class="form_connexion" action="Controleurs/ControlUser.php" method="post"> 
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">
                     </div>
                     <div class="mt-1">
-                        <input type="password" placeholder="mot de passe" id="password" name="password">
+                        <input class="inp" type="password" placeholder="mot de passe" id="password" name="password">
                     </div>
                     <div class="mt-3">
                         <button class="button1" type="submit">Connectez-vous</button>
@@ -34,7 +34,7 @@
                         <button class="button2" type="submit">S'inscrire</button>  
                     </form>                        
                 </div>
-                <div class="col-5 col-sm-5 mt-5">
+                <div class="col-5 col-sm-5 mt-5 mb-5">
                     <?php require_once 'Vues/BooksImage.php'; ?>                        
                 </div>                           
             </div>

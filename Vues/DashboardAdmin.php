@@ -20,17 +20,17 @@
         <div class="container">    
             <div class="row"> 
                 <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
-                    <form action="../Vues/ConfirmUserPage.php" method="post">
-                        <p class="little">Liste des utilisateurs<br>non confirmés</p>
-                        <div> 
-                            <?php
-                            echo '<select name="list_email">';
-                            require_once '../Modeles/WaitingList.php';
-                            echo '</select>';
-                            ?>
-                        </div>
+                    <form action="../Controleurs/ControlCreateUser.php" method="post">
+                        <p class="little">Créer Employé<br>ou Admin</p>
+                        <input type="text" placeholder="nom" id="nom" name="nom">                          
+                        <input type="text" placeholder="prénom" id="prenom" name="prenom"><br>
+                        <input type="date" id="date_naissance" name="date_naissance"><br>
+                        <input type="text" placeholder="email" id="email" name="email">
+                        <input type="password" placeholder="mot de passe" id="password" name="password"><br>                           
+                        <input type="text" placeholder="adresse" id="adresse" name="adresse"><br>  
+                        <input type="text" placeholder="ROLE" id="role" name="role"><br>      
                         <div class="mt-3">
-                            <button class="button2" type="submit">Voir</button>
+                            <button class="button2" type="submit">Créer</button>
                         </div>
                     </form> 
                 </div>
@@ -60,7 +60,7 @@
                     <form action="../Controleurs/ControlSearchUser.php" method="post">                            
                         <input type="text" placeholder="email" id="email" name="email">
                         <div class="mt-5">
-                            <button class="button2" type="submit">Rechercher</button>
+                            <button class="button2 mb-5" type="submit">Rechercher</button>
                         </div> 
                     </form>    
                 </div>

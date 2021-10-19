@@ -33,7 +33,7 @@ h1 {
     margin-left: 12vw;
 }
 
-input {
+input.inp {
     width:50vw;
     height: 5vh;
     font-size: 3vw;
@@ -42,20 +42,24 @@ input {
     color: black;
 }
 
+label {
+    font-size: 3vw;
+}
+
 .button1 {
     background-color: orange;
     color: white;
     font-family: 'Architects Daughter', cursive;
     border-radius: 10px;
-    font-size: 4vw;
+    font-size: 3vw;
     width: 35vw;
-    height: 5vh;
+    height: 6vh;
 }
 
 .little {
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: 'Architects Daughter', cursive;
-    margin-top: 3vh;
+    margin-top: 2.5vh;
     color: #4e95d8;
 }
 
@@ -70,6 +74,12 @@ input {
 }
 
 .infos {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+label.infos {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 4vw;
     font-weight: 300;

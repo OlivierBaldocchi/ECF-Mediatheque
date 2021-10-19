@@ -118,7 +118,7 @@ class BookManager {
     public function delete($book) {
         try {
             $this->pdoStatement = $this->pdo->prepare('DELETE FROM books WHERE id = :id');
-            $this->pdoStatement->bindValue(':id',$book->getId(), PDO::PARAM_INT);
+            $this->pdoStatement->bindValue(':id',$book);
 
             return $exeOk = $this->pdoStatement->execute();
 

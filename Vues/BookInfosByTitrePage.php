@@ -46,11 +46,11 @@ if (isset($_SESSION['role'])) {
                         <?php
                         $_SESSION['bookToReserv'] = $id;
                         if ($dispo === 1) { ?>
-                            <form action="ReservBookPage.php">
+                            <form action="ReservBookPage.php"> 
                                 <p>Vous pouvez réserver ce livre, puis vous
                                 devrez venir le récuperer dans les 3 jours.</p>
                                 <div class="m-5">
-                                    <button class="button1" type="submit">Réserver ce livre</button>
+                                    <button class="button1" type="submit">Réserver</button>
                                 </div>                                
                             </form>
                             <?php } ?>                        

@@ -2,15 +2,15 @@
 
 session_start();
 
-if ($_SESSION['role'] === 'ADMIN') {
+if ($_SESSION['role'] === 'EMPL') {
 
     require_once '../Controleurs/ControlConfirmRole.php';
     
 
     if ($createOk) {
-        echo 'Bravo! le rôle ' . $_POST['role'] . ' a été attribué';
+        echo 'Bravo! le compte est confirmé';
     } else {
-        echo 'Impossible d\'ajouter le rôle';
+        echo 'Impossible de confirmer le compte';
     }
 } else { 
     echo ("Vous n'êtes pas autorisé à accéder à cette page");

@@ -19,15 +19,15 @@
     <main>
         <div class="container">    
             <div class="row"> 
-                              
+                             
                 <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Rechercher un livre</p>
                     <div class="mt-5">
                         <?php require_once '../Modeles/BooksListJava.php'; ?>
 
                         <form action="../Vues/BookInfosByTitrePage.php" method="post">                               
-                        <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:20vw">
-                        <div id="suggestions" style="font-size:1.5vw"></div>
+                            <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:30vh">
+                            <div id="suggestions" style="font-size:1.5vw"></div>
                             <div>
                                 <button class='button2 mt-5' type="submit">Voir</button>
                             </div>  

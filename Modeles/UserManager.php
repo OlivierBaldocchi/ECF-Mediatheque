@@ -39,7 +39,7 @@ class UserManager {
             $password = password_hash($password, PASSWORD_DEFAULT);
             $this->pdoStatement->bindValue(5, $password);
             $this->pdoStatement->bindValue(6,$user->getAdresse(), PDO::PARAM_STR);
-            $this->pdoStatement->bindValue(7, 'En attente');
+            $this->pdoStatement->bindValue(7,$user->getRole(), PDO::PARAM_STR);
 
             return $exeOk = $this->pdoStatement->execute();
          
@@ -103,10 +103,10 @@ class UserManager {
         }      
     }
 
-    public function delete(User $user) {
+    public function delete($id) {
         try {
             $this->pdoStatement = $this->pdo->prepare('DELETE FROM utilisateurs WHERE id = :id');
-            $this->pdoStatement->bindValue(':id',$user->getId(), PDO::PARAM_INT);
+            $this->pdoStatement->bindValue(':id', $id);
 
             return $exeOk = $this->pdoStatement->execute();
 

@@ -20,7 +20,7 @@
             <div class="container">    
                 <div class="row"> 
                     
-                    <div class="col">
+                    <div class="col-10">
                         <p class="little">Ajouter un livre</p>
                         <form action="../Controleurs/ControlCreateBook.php" method="post">
                             <input type="text" placeholder="titre" id="titre" name="titre">
@@ -30,8 +30,24 @@
                             <input type="text" placeholder="genre" id="genre" name="genre">                                <button class="button2" type="submit">Envoyer</button>
                         </form>
                     </div>
-            </div>
-            <div class="row">
+            
+
+                    <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
+                        <form action="../Vues/ConfirmUserPage.php" method="post">
+                            <p class="little">Liste des utilisateurs<br>non confirmés</p>
+                            <div> 
+                                <?php
+                                echo '<select name="list_email">';
+                                require_once '../Modeles/WaitingList.php';
+                                echo '</select>';
+                                ?>
+                            </div>
+                            <div class="mt-3">
+                                <button class="button2" type="submit">Voir</button>
+                            </div>
+                        </form> 
+                    </div>
+            
                     <div class="col-10 col-xl-4 mt-5 ml-3 infos"> 
                         <p class="little">Informations livres réservés</p> 
 
@@ -49,7 +65,7 @@
                                         
                         ?>
                     </div>
-                    
+                
                     <div class="col-10 col-xl-3 mt-5">
                         <form action="../Vues/BooksListPage.php">
                             <p class="little">Liste des livres</p>
@@ -66,8 +82,9 @@
                             </div> 
                         </form>    
                     </div>
-                </div> 
-            </div>         
+                 
+                </div>  
+            </div>           
         </main>
         <?php
     } else {

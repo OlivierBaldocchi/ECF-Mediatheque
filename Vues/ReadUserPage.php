@@ -22,30 +22,39 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
     <main>
         <div class="container">    
             <div class="row"> 
-                <div class="col-1 col-xl-0">
-                </div>
-                <div class="col-10 col-xl-3 mt-5 infos">
+                
+                <div class="col-10 col-lg-3 m-5 infos">
                     <p class="little">Profil utilisateur</p>
-                    <?php
-                                   
-                    if ($_POST) {
-                        $_SESSION['emailToRead'] = $_POST['list_email'];
-                    }                     
-                    
-                    require_once '../Controleurs/ControlReadUser.php';                           
-                    
-                    if ($read) {
-                        echo 'Numéro d\'enregistré :' .$read->getId() .'<br>';
-                        echo 'Nom: ' .$read->getNom() .'<br>';
-                        echo 'Prenom :' .$read->getPrenom() .'<br>';
-                        echo 'Date de naissance :' .$read->getDateNaissance() .'<br>';
-                        echo 'Email :' .$read->getEmail() .'<br>';
-                        echo 'Adresse :' .$read->getAdresse() .'<br>';
-                        echo 'Rôle :' .$read->getRole() .'<br>';
-                    } 
-                    ?>   
+                    <form action="../Controleurs/ControlCancelUser.php" method="post">
+                    <?php                                   
+                        if ($_POST) {
+                            $_SESSION['emailToRead'] = $_POST['list_email'];
+                        }                     
+                        
+                        require_once '../Controleurs/ControlReadUser.php';                           
+                        
+                        if ($read) {
+                            echo 'Numéro d\'enregistré :' .$read->getId() .'<br>';
+                            echo 'Nom: ' .$read->getNom() .'<br>';
+                            echo 'Prenom :' .$read->getPrenom() .'<br>';
+                            echo 'Date de naissance :' .$read->getDateNaissance() .'<br>';
+                            echo 'Email :' .$read->getEmail() .'<br>';
+                            echo 'Adresse :' .$read->getAdresse() .'<br>';
+                            echo 'Rôle :' .$read->getRole() .'<br>';
+                        } 
+                        
+                        if($_SESSION['role'] === 'ADMIN') {
+                            $_SESSION['idToCancel'] = $read->getId();
+                            ?> 
+                            <div class="mt-5">
+                                <button type="submit" class="button1">Supprimer</button>
+                            </div> 
+                            <?php
+                        } ?> 
+                    </form>                    
                 </div>
-                <div class="col-10 col-xl-4 mt-5 infos">
+
+                <div class="col-10 col-lg-3 m-5 infos">
                     <p class="little">Livres réservés</p>
                     <?php
                     $id = $read->getId();
@@ -63,7 +72,7 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
                     } ?>
                 </div>                     
                 
-                <div class="col-10 col-xl-4 mt-5 infos">
+                <div class="col-10 col-lg-3 m-5 infos">
                     <p class="little">Livres empruntés</p>
                     <?php
                     $id = $read->getId();
@@ -81,19 +90,19 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
                         if($book->getDateResa() === 'emprunté'){
                             if($emprunt < $datemax){
                                 echo $book->titre .' -- RETARD -- '; ?>
-                                <a href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
+                                <a class="mb-5" href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
                                 >Confirmer le retour</a> <?php 
                                 echo '<br>'; 
                             } else {
                                 echo $book->titre; ?>
-                                <a href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
+                                <a class="mb-5" href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
                                 >Confirmer le retour</a> <?php 
                                 echo '<br>'; 
                             }
                         }    
                     }    
 
-                     ?>
+                    ?>
                 </div>  
             </div>
         </div>         

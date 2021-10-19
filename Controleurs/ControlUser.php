@@ -8,3 +8,5 @@ use Modeles\UserManager;
 
 $user = new User();
 $userManager = new UserManager();
+ 
+require_once '../Modeles/Connection.php';

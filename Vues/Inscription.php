@@ -21,7 +21,7 @@
                         <p>Veuillez entrer vos informations <br>ci-dessous s'il vous plait</p><br>
                         <input type="text" placeholder="nom" id="nom" name="nom">                          
                         <input type="text" placeholder="prénom" id="prenom" name="prenom"><br>
-                        <label style="color:black; font-family: 'Architects Daughter', cursive; font-size:1.5vw">----- date de naissance -----</label>
+                        <label style="color:black; font-family: 'Architects Daughter', cursive; font-size:2.5vh">date de naissance</label>
                         <input type="date" id="date_naissance" name="date_naissance"><br>
                         <input type="text" placeholder="email" id="email" name="email">
                         <input type="password" placeholder="mot de passe" id="password" name="password"><br>                           

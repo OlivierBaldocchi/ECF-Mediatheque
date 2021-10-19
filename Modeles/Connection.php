@@ -1,8 +1,6 @@
 <?php 
 require_once '../base.html';
 
-require_once '../Controleurs/ControlUser.php';
-
 $user = $userManager->read($_POST['email']);
 
 if ($user === null) {

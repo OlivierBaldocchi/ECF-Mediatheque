@@ -37,4 +37,6 @@ $emprunt->setUtilisateurId($_SESSION['id'])
 
 
 $resa = $empruntManager->create($emprunt); 
+
+
     

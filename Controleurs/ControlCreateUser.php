@@ -14,9 +14,19 @@ $user->setNom($_POST['nom'])
     ->setEmail($_POST['email'])
     ->setMdp($_POST['password'])
     ->setAdresse($_POST['adresse']);
+if(isset($_POST['role'])) {
+    $user->setRole($_POST['role']);
+} else {
+    $user->setRole('En attente');
+}
     
 $userManager = new UserManager();
 
 $createOk = $userManager->create($user);       
 
-  
+if(isset($_POST['role']) && $createOk) {
+    echo 'Le nouvel ' .$_POST['role']. ' est créé';
+}
+if(isset($_POST['role']) && !$createOk) {
+    echo 'création impossible';
+}
