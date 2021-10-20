@@ -1,4 +1,6 @@
 <?php
+require_once 'controller.php';
+$read = readProfilUser();
 
 if ($read) {
     echo 'Numéro d\'enregistré :' .$read->getId() .'<br>';

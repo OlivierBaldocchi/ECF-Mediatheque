@@ -1,4 +1,6 @@
 <?php
+require_once 'controller.php';
+$list = reservedBooks();
 
 try {
     foreach ($list as $book) {

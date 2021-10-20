@@ -1,10 +1,9 @@
 <?php
+require_once 'controller.php';
+$users = waitingList();
 
-require_once '../Controleurs/ControlUser.php';
 
 try {
-    $users = $userManager->readAll();
-
     foreach ($users as $user) {
         if ($user->getRole() === 'En attente') {
             $_SESSION['IdToChange'] = $user->getId();
@@ -17,3 +16,4 @@ try {
 } catch (PDOException $e) {
     echo 'Impossible de récupérer la liste des administrateurs';
 }
+

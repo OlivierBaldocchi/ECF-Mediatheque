@@ -1,4 +1,4 @@
-<?php require '../base.html';?>
+<?php require 'index.html';?>
 
 <body>
     <?php
@@ -8,10 +8,11 @@
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once '../Vues/MenuTitre.php'; ?>    
+            <?php include_once 'Vues/MenuTitre.php'; ?>    
               
             <div class="col-10 col-lg-5 col-xl-2 m-4">
-                <?php include_once '../Vues/ButtonLogOut.php'; ?>
+                <?php 
+                include_once 'Vues/ButtonLogOut.php'; ?>
             </div>
         </div>       
     </header>
@@ -22,52 +23,53 @@
                              
                 <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Rechercher un livre</p>
-                    <div class="mt-5">
-                        <?php require_once '../Modeles/BooksListJava.php'; ?>
-
-                        <form action="livres1" method="post">                               
+                    <div class="mt-5">   
+                        <form action="router.php" method="post">                               
+                            <input type="hidden" name="route" value="readbytitre">                           
                             <input valeur="" type="text" class="input" id="searchInput" name="book" placeholder="Rechercher..." style="width:30vh">
                             <div id="suggestions" style="font-size:1.5vw"></div>
                             <div>
                                 <button class='button2 mt-5' type="submit">Voir</button>
                             </div>  
-                        </form>                       
-                    </div>                    
-                            <script type='text/javascript'>
-                                <?php echo "list = '".implode("<>", $titres)."'.split('<>');"; ?>
-                                                                                
-                                const searchinput = document.getElementById('searchInput');
+                        </form>                                            
+                        <?php require_once 'Modeles/BooksListJava.php'; ?>  
+                        
+                                        <script type='text/javascript'>
+                                        <?php echo "list = '".implode("<>", $titres)."'.split('<>');"; ?>
+                                                                                        
+                                        const searchinput = document.getElementById('searchInput');
 
-                                searchinput.addEventListener('keyup', function(){
-                                    const input = searchinput.value;
+                                        searchinput.addEventListener('keyup', function(){
+                                            const input = searchinput.value;
 
-                                    const result = list.filter(item => item.toLocaleLowerCase().includes(input.toLocaleLowerCase()));
+                                            const result = list.filter(item => item.toLocaleLowerCase().includes(input.toLocaleLowerCase()));
 
-                                    let suggestion = '';
+                                            let suggestion = '';
 
-                                    if(input!='') {
-                                        result.forEach(resultItem =>
-                                            suggestion +=`
-                                                <div class="suggestion" onClick="choix('${resultItem}')">${resultItem}</div>
-                                            `
-                                        )
-                                    }                            
-                                    document.getElementById('suggestions').innerHTML = suggestion;
-                                })
+                                            if(input!='') {
+                                                result.forEach(resultItem =>
+                                                    suggestion +=`
+                                                        <div class="suggestion" onClick="choix('${resultItem}')">${resultItem}</div>
+                                                    `
+                                                )
+                                            }                            
+                                            document.getElementById('suggestions').innerHTML = suggestion;
+                                        })
 
-                                function choix(valeur) {
-                                    document.getElementById('searchInput').value=valeur;
-                                }
-                                
-                            </script>                    
-                </div>
+                                        function choix(valeur) {
+                                            document.getElementById('searchInput').value=valeur;
+                                        }
+                                        </script>      
+                    </div>                
+                </div>                    
+                                       
                 <div class="col-md-6 col-xl-4 mt-5">
                     <p class="little">Mes livres réservés</p>
                     <?php 
                     $id = $_SESSION['id'];
-                    require_once '../Controleurs/ControlUserReservedBooks.php';
+                    require_once 'Controleurs/ControlUserReservedBooks.php';
 
-                    require_once '../Modeles/MyReserved.php';
+                    require_once 'Modeles/MyReserved.php';
                     ?>
                 </div>
 
@@ -76,15 +78,16 @@
                     <?php
                     $id = $_SESSION['id'];
 
-                    require_once '../Controleurs/ControlUserReservedBooks.php';
+                    require_once 'Controleurs/ControlUserReservedBooks.php';
 
-                    require_once '../Modeles/MyEmprunts.php';
+                    require_once 'Modeles/MyEmprunts.php';
 
                     ?>
                 </div>
 
                 <div class="col-md-6 col-xl-3 mt-5 mb-5">
-                    <form action="livres">
+                    <form action="router.php" method="post">
+                        <input type="hidden" name="route" value="booklist">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
                     </form>

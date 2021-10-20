@@ -1,11 +1,8 @@
 <?php
-
 session_start();
-
 if ($_SESSION['role'] === 'EMPL') {
-
-    require_once '../Controleurs/ControlConfirmRole.php';
-    
+    require_once '../controller.php';
+    $createOk = confirmRole();
 
     if ($createOk) {
         echo 'Bravo! le compte est confirmé';

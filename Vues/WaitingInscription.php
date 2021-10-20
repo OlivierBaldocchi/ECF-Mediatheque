@@ -1,5 +1,5 @@
 <?php 
-require '../base.html';
+require '../index.html';
 
 ?>
 

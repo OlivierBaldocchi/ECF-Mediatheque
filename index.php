@@ -1,4 +1,4 @@
-<?php require_once 'base.html';?>
+<?php require_once 'index.html';?>
 
 <body>
     <header class="container-fluid">
@@ -7,7 +7,8 @@
             <?php include_once 'Vues/MenuTitre.php';?>   
               
             <div class="col-5 col-md-2 mt-3">
-                <form class="form_connexion" action="board" method="post"> 
+                <form class="form_connexion" action="router.php" method="post"> 
+                    <input type="hidden" name="route" value="connexion">
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">
                     </div>
@@ -30,7 +31,7 @@
                     <p>Votre médiathèque <br> se modernise !</p>
                     <p>Connectez-vous<br>et profitez du<br>"Click and Collect !"</p>
                     <p class="little">Si vous n'avez pas encore<br>de compte, inscrivez-vous ici</p>
-                    <form action="inscription">
+                    <form action="Vues/Inscription.php">
                         <button class="button2" type="submit">S'inscrire</button>  
                     </form>                        
                 </div>

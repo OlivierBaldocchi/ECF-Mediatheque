@@ -1,8 +1,7 @@
 <?php 
-require_once '../base.html'; 
-session_start();
+require_once 'index.html'; 
 $token = $_SESSION['token'];  
-require_once '../Modeles/Token.php';
+require_once 'Modeles/Token.php';
 
 if (isset($_SESSION['role'])) {
  ?>
@@ -26,8 +25,6 @@ if (isset($_SESSION['role'])) {
                 <div class="col-1"> </div>
                 <div class="col-10 col-lg-5  mt-5">
                     <?php 
-                    
-                    require_once '../Controleurs/ControlReservBook.php'; 
                     
                     if ($dispo && $resa) {
                         echo 'Vous avez bien réservé:' .'<br>'.'" ' .$titre. ' "'.'<br>'.

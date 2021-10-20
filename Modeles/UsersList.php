@@ -1,10 +1,9 @@
 <?php
 
-require_once '../Controleurs/ControlUser.php';
+require_once 'controller.php';
+$users = readAllUsers();
 
 try {
-    $users = $userManager->readAll();
-
     foreach ($users as $user) {
         $email = $user->getEmail();
         $nom = $user->getNom();

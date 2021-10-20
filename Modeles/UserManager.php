@@ -70,13 +70,11 @@ class UserManager {
             $this->pdoStatement = $this->pdo->query('SELECT * FROM utilisateurs ORDER BY nom, prenom');
 
             $users = [];
-
             while ($user = $this->pdoStatement->fetchObject('Modeles\User')) {
                 $users[] = $user;
             }
             
             return $users;
-
         } catch (PDOException $e) {
             echo 'echec de la lecture';
         }      
@@ -97,7 +95,6 @@ class UserManager {
             $this->pdoStatement->bindValue(':id',$user->getId(), PDO::PARAM_INT);
 
             return $exeOk = $this->pdoStatement->execute();
-
         } catch (PDOException $e) {
             echo 'echec de la mise à jour';
         }      
@@ -109,7 +106,6 @@ class UserManager {
             $this->pdoStatement->bindValue(':id', $id);
 
             return $exeOk = $this->pdoStatement->execute();
-
         } catch (PDOException $e) {
             echo 'echec de la mise à jour';
         }      
@@ -117,12 +113,10 @@ class UserManager {
 
     public function confirmRole($id) {
         try {
-
             $this->pdoStatement = $this->pdo->prepare("UPDATE utilisateurs SET role = ? WHERE id = $id ");
             $this->pdoStatement->bindValue(1, $_POST['role']);
             
             return $exeOk = $this->pdoStatement->execute();
-
         } catch (PDOException $e) {
             echo 'echec de la mise à jour';
         }      
@@ -133,15 +127,11 @@ class UserManager {
             $sql = "SELECT * FROM utilisateurs WHERE email LIKE '$search' ";
             $this->pdoStatement = $this->pdo->prepare($sql);
             $this->pdoStatement->execute();
-            
-            foreach ($this->pdo->query($sql, PDO::FETCH_ASSOC)as $login) {
-                
-                $_SESSION['emailToRead'] = $login["email"];
-                ?> 
-                <a href="user"><?php echo $login["email"] .'<br>' ?></a>
-                <?php 
-            }
-            
+            foreach ($this->pdo->query($sql, PDO::FETCH_ASSOC)as $login) {        
+                $_SESSION['emailToRead'] = $login["email"];  ?> 
+                <a href="router.php?route=infouser&emailtoread=<?php echo $_SESSION['emailToRead'] ?>"><?php echo $login["email"] .'<br>' ?></a>
+            <?php 
+            }          
         } catch (PDOException $e) {
             echo 'echec de la recherche';
         }      

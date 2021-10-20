@@ -1,12 +1,12 @@
 <?php 
-require '../base.html';
+require 'index.html';
 session_start();
 $token = $_SESSION['token'];  
-require_once '../Modeles/Token.php';
+require_once 'Modeles/Token.php';
 
 if (isset($_SESSION['role'])) {
 ?>
-
+ 
 <body>
     <header class="container-fluid">
         <div class="row title">
@@ -25,10 +25,10 @@ if (isset($_SESSION['role'])) {
                 <div class="col-xl-1"></div>          
                 <div class="col-11 col-xl-7 mb-5 little">
                     
-                    <?php require_once '../Modeles/BooksList.php'; ?>
+                    <?php require_once 'Modeles/BooksList.php'; ?>
                 </div>  
                 <div class="col-xl-3 mt-5 mb-5">
-                    <?php require_once 'BooksImage.php'; ?>
+                    <?php require_once 'Vues/BooksImage.php'; ?>
                 </div>       
             </div> 
         </div>         

@@ -1,8 +1,8 @@
 <?php 
-require '../base.html';
+require 'index.html';
 session_start();
 $token = $_SESSION['token'];  
-require_once '../Modeles/Token.php';
+require_once 'Modeles/Token.php';
 
 if (isset($_SESSION['role'])) {
 ?>
@@ -24,11 +24,10 @@ if (isset($_SESSION['role'])) {
             <div class="row mt-5"> 
                     <div class="col-1"></div>
                     <div class="col-11 col-md-6 col-xl-3 mt-5 infos">
-                        <form action="../Controleurs/ControlCancelBook.php" method="post">
-                            <?php  
-                            require_once '../Controleurs/ControlReadBook.php';   
+                        <form action="Modeles/CancelBook.php" method="post">
+                            <?php 
 
-                            require_once '../Modeles/ReadBook.php';
+                            require_once 'Modeles/ReadBook.php';
                             
                             if($_SESSION['role'] === 'ADMIN' || $_SESSION['role'] === 'EMPL') {
                                 $_SESSION['bookToCancel'] = $read->getId();
@@ -43,8 +42,10 @@ if (isset($_SESSION['role'])) {
                     <div class="col-10 col-md-6 col-xl-4 mt-5 mb-5">
                         <?php
                         $_SESSION['bookToReserv'] = $_GET['id'];
-                        if ($_GET['dispo'] == 1) { ?>
-                            <form action="ReservBookPage.php">
+                        if ($_GET['dispo'] == 1) { 
+                            ?>
+                            <form action="router.php" method="post">
+                                <input type="hidden" name="route" value="reserv">
                                 <p>Vous pouvez réserver ce livre, puis vous
                                 devrez venir le récuperer dans les 3 jours.</p>
                                 <div class="m-4">

@@ -1,9 +1,8 @@
 <?php
-
-require_once '../Controleurs/ControlBook.php';
+require_once 'controller.php';
+$books = controlBookJava();
 
 try {
-    $books = $bookManager->readAll();
     $titres = [];
     foreach ($books as $book) {
         $titre = $book->getTitre();  

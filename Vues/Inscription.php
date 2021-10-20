@@ -1,5 +1,5 @@
 
-<?php require '../base.html';?>
+<?php require '../index.html';?>
 
 <body>
     <header class="container-fluid">

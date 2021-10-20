@@ -3,8 +3,8 @@
 foreach($list as $book) {
     if($book->GetDateEmprunt() === 'réservé') {
         echo '- ' . $book->titre; ?> 
-        <a href="../Controleurs/ControlEmprunt.php?user=
-        <?php echo $book->getUtilisateurId() ?> &book=<?php echo $book->getBookid() ?>"
+        <a href="router.php?user=
+        <?php echo $book->getUtilisateurId() ?> &book=<?php echo $book->getBookid() ?> &route=emprunt"
         >Confirmer l'emprunt</a> <?php 
         echo '<br>';
     }    

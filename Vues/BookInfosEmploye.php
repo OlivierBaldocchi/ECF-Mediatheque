@@ -1,5 +1,5 @@
 <?php 
-require '../base.html';
+require '../index.html';
 session_start();
 $token = $_SESSION['token'];  
 require_once '../Modeles/Token.php';

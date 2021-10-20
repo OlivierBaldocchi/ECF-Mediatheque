@@ -11,12 +11,12 @@ foreach($list as $book) {
     if($book->getDateResa() === 'emprunté'){
         if($emprunt < $datemax){
             echo '- RETARD/ ' . $book->titre; ?>
-            <a class="mb-5" href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
+            <a class="mb-5" href="router.php?book=<?php echo $book->getBookid() ?> &route=retour"
             >Confirmer le retour</a> <?php 
             echo '<br>'; 
         } else {
             echo '- ' . $book->titre; ?>
-            <a class="mb-5" href="../Controleurs/ControlReturnBook.php?book=<?php echo $book->getBookid() ?>"
+            <a class="mb-5" href="router.php?book=<?php echo $book->getBookid() ?> &route=retour"
             >Confirmer le retour</a> <?php 
             echo '<br>'; 
         }

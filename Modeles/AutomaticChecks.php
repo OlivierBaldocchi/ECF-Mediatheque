@@ -1,7 +1,9 @@
 <?php
+require_once 'controller.php';
+$resas = automaticChecks();
 
 try {
-    $resas = $empruntManager->checkFinResaDate();
+    
 
     foreach ($resas as $resa) {
         $date = $resa->getDateFinResa();
