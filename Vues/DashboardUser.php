@@ -66,9 +66,10 @@
                 <div class="col-md-6 col-xl-4 mt-5">
                     <p class="little">Mes livres réservés</p>
                     <?php 
+                    
+                    require_once 'controller.php'; 
                     $id = $_SESSION['id'];
-                    require_once 'Controleurs/ControlUserReservedBooks.php';
-
+                    $list = userReservedBooks($id);
                     require_once 'Modeles/MyReserved.php';
                     ?>
                 </div>
@@ -76,10 +77,9 @@
                 <div class="col-md-6 col-xl-4 mt-5">
                     <p class="little">Mes livres empruntés</p>
                     <?php
+                    require_once 'controller.php'; 
                     $id = $_SESSION['id'];
-
-                    require_once 'Controleurs/ControlUserReservedBooks.php';
-
+                    $list = userReservedBooks($id);
                     require_once 'Modeles/MyEmprunts.php';
 
                     ?>

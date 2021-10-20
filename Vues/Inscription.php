@@ -34,7 +34,7 @@
                     </form>    
                 </div> 
                 <div class="col-5 col-sm-4">
-                    <?php require_once 'BooksImage.php'; ?>                        
+                    <?php require_once '../Vues/BooksImage.php'; ?>                        
                 </div>
             </div>
         </div>         
