@@ -20,7 +20,7 @@
         <div class="container">    
             <div class="row"> 
                 <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
-                    <form action="../Controleurs/ControlCreateUser.php" method="post">
+                    <form action="/MEDIATHEQUE/Controleurs/ControlCreateUser.php" method="post">
                         <p class="little">Créer Employé<br>ou Admin</p>
                         <input type="text" placeholder="nom" id="nom" name="nom">                          
                         <input type="text" placeholder="prénom" id="prenom" name="prenom"><br>
@@ -35,7 +35,7 @@
                     </form> 
                 </div>
                 <div class="col-md-6 col-xl-3 mt-5">
-                    <form action="../Vues/ReadUserPage.php" method="post">
+                    <form action="user" method="post">
                         <p class="little">Liste de tous<br>les utilisateurs</p>
                         <div>
                             <?php
@@ -50,14 +50,14 @@
                     </form>                       
                 </div>
                 <div class="col-md-6 col-xl-3 mt-5">
-                    <form action="../Vues/BooksListPage.php">
+                    <form action="livres">
                         <p class="little">Liste des livres</p>
                         <button class="button2" type="submit">Cliquez ici</button>
                     </form>
                 </div>
                 <div class="col-md-6 col-xl-3 mt-5">
                     <p class="little">Rechercher<br>un utilisateur</p>
-                    <form action="../Controleurs/ControlSearchUser.php" method="post">                            
+                    <form action="searchU" method="post">                            
                         <input type="text" placeholder="email" id="email" name="email">
                         <div class="mt-5">
                             <button class="button2 mb-5" type="submit">Rechercher</button>

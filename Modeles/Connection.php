@@ -24,10 +24,10 @@ if ($user === null) {
             if ($user->getRole() === 'ADMIN') {
                 $_SESSION['role'] = 'ADMIN'; 
                 require_once '../Vues/DashboardAdmin.php';                    
-            }
+            } 
             elseif ($user->getRole() === 'EMPL') {
                 $_SESSION['role'] = 'EMPL'; 
-                 require_once '../Vues/DashboardEmploye.php';  
+                require_once '../Vues/DashboardEmploye.php';   
             }
             elseif ($user->getRole() === 'INSCR') {
                 $_SESSION['role'] = 'INSCR'; 

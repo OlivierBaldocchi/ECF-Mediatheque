@@ -27,26 +27,14 @@ if (isset($_SESSION['role'])) {
                         <?php  
                         require_once '../Controleurs/ControlReadByTitreBook.php';  
 
-                        if ($read) {                            
-                            echo '<u>Titre</u> :' .'<br>'. $read->getTitre() .'<br>';
-                            echo '<br>';
-                            echo '<u>Année de parution</u> :' .'<br>'. $read->getParution() .'<br>';
-                            echo '<br>';
-                            echo '<u>Résumé</u> :' .'<br>'.$read->getDescription() .'<br>';
-                            echo '<br>';
-                            echo '<u>Auteur</u> :' .'<br>'. $read->getAuteur() .'<br>';
-                            echo '<br>';
-                            echo '<u>Genre</u> :' .'<br>'. $read->getGenre() .'<br>';
-                            $dispo = $read->getStatut();
-                            $id = $read->getId();
-                        }                     
+                        require_once '../Modeles/ReadByTitreBook.php'   
                         ?>
                     </div> 
                     <div class="col-md-4 col-xl-3 mt-5">
                         <?php
                         $_SESSION['bookToReserv'] = $id;
                         if ($dispo === 1) { ?>
-                            <form action="ReservBookPage.php"> 
+                            <form action="/MEDIATHEQUE/Vues/ReservBookPage.php"> 
                                 <p>Vous pouvez réserver ce livre, puis vous
                                 devrez venir le récuperer dans les 3 jours.</p>
                                 <div class="m-5">

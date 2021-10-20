@@ -26,19 +26,9 @@ if (isset($_SESSION['role'])) {
                     <div class="col-11 col-md-6 col-xl-3 mt-5 infos">
                         <form action="../Controleurs/ControlCancelBook.php" method="post">
                             <?php  
-                            require_once '../Controleurs/ControlReadBook.php';  
+                            require_once '../Controleurs/ControlReadBook.php';   
 
-                            if ($read) {                            
-                                echo '<u>Titre</u> :' .'<br>'. $read->getTitre() .'<br>';
-                                echo '<br>';
-                                echo '<u>Année de parution</u> :' .'<br>'. $read->getParution() .'<br>';
-                                echo '<br>';
-                                echo '<u>Résumé</u> :' .'<br>'.$read->getDescription() .'<br>';
-                                echo '<br>';
-                                echo '<u>Auteur</u> :' .'<br>'. $read->getAuteur() .'<br>';
-                                echo '<br>';
-                                echo '<u>Genre</u> :' .'<br>'. $read->getGenre() .'<br>';
-                            }  
+                            require_once '../Modeles/ReadBook.php';
                             
                             if($_SESSION['role'] === 'ADMIN' || $_SESSION['role'] === 'EMPL') {
                                 $_SESSION['bookToCancel'] = $read->getId();

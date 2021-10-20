@@ -135,10 +135,10 @@ class UserManager {
             $this->pdoStatement->execute();
             
             foreach ($this->pdo->query($sql, PDO::FETCH_ASSOC)as $login) {
-                session_start();
+                
                 $_SESSION['emailToRead'] = $login["email"];
                 ?> 
-                <a href="../Vues/ReadUserPage.php"><?php echo $login["email"] .'<br>' ?></a>
+                <a href="user"><?php echo $login["email"] .'<br>' ?></a>
                 <?php 
             }
             

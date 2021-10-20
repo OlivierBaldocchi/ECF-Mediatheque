@@ -57,10 +57,6 @@
         width: 25vw;
         font-size: 1.5vw;
     }
-
-    .title {
-        height: 22vw;  
-    }
     
     .little {
         font-size: 2vw;
@@ -79,17 +75,13 @@
         font-size: 1vw;
     }
     
-    .title {
-        height: 22vh;  
-    }
-    
     h1 {
         font-size: 3vw;
         margin-left: 13vw;
     }
       
     input.inp {
-        width: 20vw;
+        width: 15vw;
         font-size: 1vw;
         color: #000;
     }
@@ -149,7 +141,6 @@
     }
     
     .title {
-        height: 40vh;
         margin: 1vw;
         margin-right: 5vw;
     }
@@ -167,7 +158,7 @@
     }
     
     input.inp {
-        width: 20vw;
+        width: 15vw;
         font-size: 2vw;
     }
     

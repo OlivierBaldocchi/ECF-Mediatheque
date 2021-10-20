@@ -28,17 +28,7 @@ if (isset($_SESSION['role']) {
                          
                         require_once '../Controleurs/ControlReadUser.php';  
                         
-                        if ($user) {                            
-                            echo '<u>Titre</u> :' .'<br>'. $read->getTitre() .'<br>';
-                            echo '<br>';
-                            echo '<u>Année de parution</u> :' .'<br>'. $read->getParution() .'<br>';
-                            echo '<br>';
-                            echo '<u>Résumé</u> :' .'<br>'.$read->getDescription() .'<br>';
-                            echo '<br>';
-                            echo '<u>Auteur</u> :' .'<br>'. $read->getAuteur() .'<br>';
-                            echo '<br>';
-                            echo '<u>Genre</u> :' .'<br>'. $read->getGenre() .'<br>';
-                        }                     
+                        require_once '../Modeles/ReadBook.php';             
                         ?>
                     </div> 
                     

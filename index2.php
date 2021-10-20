@@ -1,5 +1,6 @@
 <?php
 
-$_SESSION['token'] = md5(time() * rand(142, 628));
-
-echo $_SESSION['token'];
+$date = '27-09-2013';
+$date = date('Y-m-d', strtotime($date));
+echo $date;
+echo date('Y-m-d');

@@ -72,9 +72,11 @@ class EmpruntManager {
 
     public function readAll() {
         try {
-            $this->pdoStatement = $this->pdo->query('SELECT dateemprunt, books.titre, utilisateurs.email FROM emprunts                                                
+            $this->pdoStatement = $this->pdo->query('SELECT emprunts.dateemprunt, emprunts.dateresa, books.titre, 
+                                                    utilisateurs.email FROM emprunts                                              
                                                     JOIN books ON emprunts.bookid = books.id
-                                                    JOIN utilisateurs ON utilisateurs.id = emprunts.utilisateurid');
+                                                    JOIN utilisateurs ON utilisateurs.id = emprunts.utilisateurid
+                                                    ORDER BY emprunts.dateemprunt');
             $emprunts = [];
 
             while ($emprunt = $this->pdoStatement->fetchObject('Modeles\emprunt')) {

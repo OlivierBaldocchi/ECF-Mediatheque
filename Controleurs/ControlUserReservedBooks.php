@@ -1,6 +1,5 @@
 <?php
 
-
 require_once '../Modeles/Book.php';
 require_once '../Modeles/BookManager.php';
 require_once '../Modeles/Emprunt.php';

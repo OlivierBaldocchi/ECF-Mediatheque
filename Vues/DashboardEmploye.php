@@ -2,7 +2,6 @@
 
 <body>
     <?php
-    
     if (isset($_SESSION['role']) and $_SESSION['role'] === 'EMPL' && $_SESSION['token'] === $token) {
         ?>
     <header class="container-fluid">
@@ -22,7 +21,7 @@
                     
                     <div class="col-10">
                         <p class="little">Ajouter un livre</p>
-                        <form action="../Controleurs/ControlCreateBook.php" method="post">
+                        <form action="newB" method="post">
                             <input type="text" placeholder="titre" id="titre" name="titre">
                             <input type="text" placeholder="parution" id="parution" name="parution">
                             <input type="text" placeholder="description" id="description" name="description">
@@ -31,14 +30,13 @@
                         </form>
                     </div>
             
-
                     <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
-                        <form action="../Vues/ConfirmUserPage.php" method="post">
+                        <form action="confirmU" method="post">
                             <p class="little">Liste des utilisateurs<br>non confirmés</p>
                             <div> 
                                 <?php
                                 echo '<select name="list_email">';
-                                require_once '../Modeles/WaitingList.php';
+                                include_once '../Modeles/WaitingList.php';
                                 echo '</select>';
                                 ?>
                             </div>
@@ -48,26 +46,31 @@
                         </form> 
                     </div>
             
-                    <div class="col-10 col-xl-4 mt-5 ml-3 infos"> 
-                        <p class="little">Informations livres réservés</p> 
+                    <div class="col-10 col-xl-4 mt-5 ml-3"> 
+                        <p class="little">Livres réservés</p> 
 
-                        <?php include_once '../Controleurs/ControlReservedBooksList.php'; 
+                        <?php 
+                        include_once '../Controleurs/ControlReservedBooksList.php'; 
                         
-                        try {
-                            foreach ($list as $book) {
-                                if ($book->getDateEmprunt() === 'réservé'){
-                                    echo $book->titre .', réservé par: '. $book->email .'<br>';                                                                       
-                                }                                                                       
-                            }         
-                        } catch (PDOException $e) {
-                            echo 'Impossible de récupérer la liste des livres';
-                        }
+                        include_once '../Modeles/ReservedList.php';
+                                        
+                        ?>
+                    </div>
+
+                    <div class="col-10 col-xl-5 mt-5 ml-3"> 
+                        <p class="little">Livres empruntés</p> 
+
+                        <?php 
+                        
+                        include_once '../Controleurs/ControlReservedBooksList.php'; 
+                        
+                        include_once '../Modeles/EmpruntsList.php';
                                         
                         ?>
                     </div>
                 
                     <div class="col-10 col-xl-3 mt-5">
-                        <form action="../Vues/BooksListPage.php">
+                        <form action="livres">
                             <p class="little">Liste des livres</p>
                             <button class="button2" type="submit">Cliquez ici</button>
                         </form>
@@ -75,7 +78,7 @@
 
                     <div class="col-10 col-xl-4 mt-5 mb-5">
                         <p class="little">Rechercher<br>un utilisateur</p>
-                        <form action="../Controleurs/ControlSearchUser.php" method="post">                            
+                        <form action="searchU" method="post">                            
                             <input type="text" placeholder="email" id="email" name="email">
                             <div class="mt-5">
                                 <button class="button2" type="submit">Rechercher</button>

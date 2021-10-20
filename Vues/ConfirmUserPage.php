@@ -30,7 +30,7 @@ require_once '../Modeles/Token.php';
                     require_once '../Controleurs/ControlReadUser.php';
                     
                     ?>
-                    <form action="../Modeles/ConfirmRole.php" method="post">
+                    <form action="/MEDIATHEQUE/Modeles/ConfirmRole.php" method="post">
                         <div class="mt-3 mb-5">
                             <p>Confirmer le compte de: <?php echo $read->getNom() .' '. $read->getPrenom() ?> </p>
                         </div>    
