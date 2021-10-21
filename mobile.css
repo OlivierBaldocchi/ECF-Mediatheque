@@ -6,12 +6,13 @@
     margin-left: 3vw;
 }
 
-.btnmenu {
+.btnmenu, .button1, .button2 {
     background-color: #ffa500;
     font-family: 'Architects Daughter', cursive;
     border-radius: 10px;
     width: 20vw;
     font-size: 4vw;
+    height: auto;
 }
 
 a {
@@ -46,31 +47,11 @@ label {
     font-size: 3vw;
 }
 
-.button1 {
-    background-color: orange;
-    color: white;
-    font-family: 'Architects Daughter', cursive;
-    border-radius: 10px;
-    font-size: 3vw;
-    width: 35vw;
-    height: 6vh;
-}
-
 .little {
     font-size: 5vw;
     font-family: 'Architects Daughter', cursive;
     margin-top: 2.5vh;
     color: #4e95d8;
-}
-
-.button2 {
-    background-color: #ffa500;
-    color: white;
-    font-family: 'Architects Daughter', cursive;
-    border-radius: 10px;
-    font-size: 3vw;
-    width: 20vw;
-    height: 4vh;
 }
 
 .infos {

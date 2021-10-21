@@ -12,9 +12,10 @@
         margin-left: 30vw;
     }
     
-    .btnmenu {
+    .btnmenu, .button1, .button2 {
         width: 15vw;
         font-size: 3vw;
+        height: auto;
     }
 
     .form_connexion {
@@ -24,12 +25,6 @@
     input.inp {
         width: 35vw;
         font-size: 2.5vw;
-    }
-
-    .button1 {
-        font-size: 2.5vw;
-        width: 35vw;
-        height: 5vh;
     }
 
     .little {
@@ -43,9 +38,10 @@
 
 
 @media screen and (min-width: 990px) {
-    .btnmenu {
+    .btnmenu, .button1, .button2 {
         width: 5vw;
         font-size: 1.3vw;
+        height: auto;
     }
     
     h1 {
@@ -66,9 +62,10 @@
 
 
 @media screen and (min-width: 1200px) {   
-    .btnmenu {
+    .btnmenu, .button1, .button2 {
         width: 7vw;
         font-size: 1.3vw;
+        height: auto;
     }
         
     a {
@@ -89,24 +86,12 @@
     form > label {
         font-size: 1vw;
     }
-    
-    .button1 {
-        font-size: 1vw;
-        width: 12vw;
-        height: 5vh;
-    }
-    
+      
     .little {
         font-size: 1.5vw;
         margin-top: 2vh;
     }
     
-    .button2 {
-        font-size: 1vw;
-        width: 10vw;
-        height: 4vh;
-    }
-
     .infos {
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1vw;
@@ -131,9 +116,10 @@
         margin-left: 2vw;
     }
     
-    .btnmenu {
+    .btnmenu, .button1, .button2 {
         width: 10vw;
         font-size: 2vw;
+        height: auto;
     }
     
     a {
@@ -160,12 +146,6 @@
     input.inp {
         width: 15vw;
         font-size: 2vw;
-    }
-    
-    .button1 {
-        font-size: 2vw;
-        width: 20vw;
-        height: 5vh;
     }
 }
 

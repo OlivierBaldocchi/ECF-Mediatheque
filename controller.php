@@ -212,7 +212,8 @@ function createUser() {
     }
         
     $userManager = new UserManager();
-    $createOk = $userManager->create($user);       
+    $createOk = $userManager->create($user); 
+    return $createOk;      
 
     if(isset($_POST['role']) && $createOk) {
         echo 'Le nouvel ' .$_POST['role']. ' est créé';

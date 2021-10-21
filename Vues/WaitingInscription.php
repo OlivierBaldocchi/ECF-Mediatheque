@@ -23,8 +23,8 @@ require '../index.html';
                 <div class="col-10 col-sm-5 little">
                     <p>
                     <?php
-
                     require_once '../Modeles/Inscription.php';
+                    
                     ?> 
                     </p> 
                 </div>                     

@@ -13,8 +13,7 @@
     <main>
         <div class="container">    
             <div class="row"> 
-                <div class="col-1">
-                    
+                <div class="col-1">                    
                 </div>
                 <div class="col-10 col-lg-5 little">
                     <form action="WaitingInscription.php" method="post">

@@ -8,6 +8,11 @@
             <a class="dropdown-item" href="">Horaires</a>
             <a class="dropdown-item" href="">Informations</a>
         </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+            $(".dropdown-toggle").dropdown();
+});
+        </script>
     </div>
 </div> 
 

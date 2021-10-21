@@ -9,8 +9,9 @@ if (validateDate($_POST['date_naissance'])) {
     if ($_POST['nom'] !== '' && $_POST['prenom'] !== '' && $_POST['date_naissance'] !== '' 
         && $_POST['email'] !== '' && $_POST['password'] !== '' && $_POST['adresse'] !== '') {
 
-        require_once '../Controleurs/ControlCreateUser.php';    
-    
+        require_once '../controller.php';    
+        $createOk = createUser();  
+
         if ($createOk) {
             echo 'Merci, le compte de ' .'<br>'. $_POST['prenom'] . ' ' . $_POST['nom'] .'<br>'. ' a été créé.' 
                     .'<br>'. 'Votre demande sera traitée' .'<br>'. 'dans les 24h.' .'<br>'. 
