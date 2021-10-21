@@ -1,20 +1,20 @@
 <?php
 
-require_once 'Modeles/User.php';
-require_once 'Modeles/UserManager.php';
-require_once 'Modeles/Book.php';
-require_once 'Modeles/BookManager.php';
-require_once 'Modeles/Emprunt.php';
-require_once 'Modeles/EmpruntManager.php';
+require_once 'Classes/User.php';
+require_once 'Classes/UserManager.php';
+require_once 'Classes/Book.php';
+require_once 'Classes/BookManager.php';
+require_once 'Classes/Emprunt.php';
+require_once 'Classes/EmpruntManager.php';
 
-use Modeles\User; 
-use Modeles\UserManager; 
+use Classes\User; 
+use Classes\UserManager; 
 
-use Modeles\Book; 
-use Modeles\BookManager; 
+use Classes\Book; 
+use Classes\BookManager; 
 
-use Modeles\Emprunt; 
-use Modeles\EmpruntManager; 
+use Classes\Emprunt; 
+use Classes\EmpruntManager; 
 
 
 function automaticChecks() {
@@ -115,8 +115,9 @@ function reservedBooks() {
 
 function readUser() {
     $userManager = new UserManager();
-    $email = $_SESSION['emailToRead'];
-    $read = $userManager->read($email);  
+    $email = $_POST['list_email'];
+    $read = $userManager->read($email); 
+    return $read; 
     require_once 'Vues/ConfirmUserPage.php';
 }
 
@@ -145,9 +146,9 @@ function confirmRole() {
     $user = new User();
     $userManager = new UserManager();
     $id = $_SESSION['IdToChange'];
-    $createOk = $userManager->ConfirmRole($id); 
+    $createOk = $userManager->confirmRole($id); 
     return $createOk;
-}
+} 
 
 function cancelBook() {
     $id = $_SESSION['bookToCancel'];
@@ -199,14 +200,14 @@ function retour() {
 function createUser() {
     $user = new User();
         
-    $user->setNom($_POST['nom'])
-        ->setPrenom($_POST['prenom'])
-        ->setDateNaissance($_POST['date_naissance'])
-        ->setEmail($_POST['email'])
+    $user->setNom(htmlspecialchars($_POST['nom'], ENT_QUOTES))
+        ->setPrenom(htmlspecialchars($_POST['prenom'], ENT_QUOTES))
+        ->setDateNaissance(htmlspecialchars($_POST['date_naissance'], ENT_QUOTES))
+        ->setEmail(htmlspecialchars($_POST['email'], ENT_QUOTES))
         ->setMdp($_POST['password'])
-        ->setAdresse($_POST['adresse']);
+        ->setAdresse(htmlspecialchars($_POST['adresse'], ENT_QUOTES));
     if(isset($_POST['role'])) {
-        $user->setRole($_POST['role']);
+        $user->setRole(htmlspecialchars($_POST['role'], ENT_QUOTES));
     } else {
         $user->setRole('En attente');
     }

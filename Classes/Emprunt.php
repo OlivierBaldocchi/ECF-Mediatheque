@@ -1,6 +1,6 @@
 <?php
 
-namespace Modeles;
+namespace Classes;
  
 class Emprunt {
     private int $utilisateurid;

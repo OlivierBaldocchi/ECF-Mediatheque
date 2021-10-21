@@ -1,9 +1,9 @@
 <?php
   
-namespace Modeles;
+namespace Classes;
 
 use PDO;
-use Modeles\User;
+use Classes\User;
 
 
 class UserManager {
@@ -36,7 +36,7 @@ class UserManager {
             $this->pdoStatement->bindValue(3,$user->getDateNaissance(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(4,$user->getEmail(), PDO::PARAM_STR);
             $password = $user->getMdp();
-            $password = password_hash($password, PASSWORD_DEFAULT);
+            $password = password_hash($password, PASSWORD_BCRYPT);
             $this->pdoStatement->bindValue(5, $password);
             $this->pdoStatement->bindValue(6,$user->getAdresse(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(7,$user->getRole(), PDO::PARAM_STR);
@@ -55,7 +55,7 @@ class UserManager {
             $exeOk = $this->pdoStatement->execute();
 
             if ($exeOk) {
-                $user = $this->pdoStatement->fetchObject('Modeles\User');
+                $user = $this->pdoStatement->fetchObject('Classes\User');
                 return $user;
             } else {
                 return false;
@@ -70,7 +70,7 @@ class UserManager {
             $this->pdoStatement = $this->pdo->query('SELECT * FROM utilisateurs ORDER BY nom, prenom');
 
             $users = [];
-            while ($user = $this->pdoStatement->fetchObject('Modeles\User')) {
+            while ($user = $this->pdoStatement->fetchObject('Classes\User')) {
                 $users[] = $user;
             }
             

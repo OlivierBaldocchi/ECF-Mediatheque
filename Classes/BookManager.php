@@ -1,9 +1,9 @@
 <?php
   
-namespace Modeles;
+namespace Classes;
 
 use PDO;
-use Modeles\Book;
+use Classes\Book;
 
 class BookManager {
 
@@ -51,7 +51,7 @@ class BookManager {
             $exeOk = $this->pdoStatement->execute();
 
             if ($exeOk) {
-                $book = $this->pdoStatement->fetchObject('Modeles\Book');
+                $book = $this->pdoStatement->fetchObject('Classes\Book');
                 return $book;
             } else {
                 return false;
@@ -68,7 +68,7 @@ class BookManager {
             $exeOk = $this->pdoStatement->execute();
 
             if ($exeOk) {
-                $book = $this->pdoStatement->fetchObject('Modeles\Book');
+                $book = $this->pdoStatement->fetchObject('Classes\Book');
                 return $book;
             } else {
                 return false;
@@ -84,7 +84,7 @@ class BookManager {
 
             $books = [];
 
-            while ($book = $this->pdoStatement->fetchObject('Modeles\Book')) {
+            while ($book = $this->pdoStatement->fetchObject('Classes\Book')) {
                 $books[] = $book;
             }
             

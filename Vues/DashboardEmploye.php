@@ -32,7 +32,7 @@
                     </div>
             
                     <div class="col-md-6 col-xl-3 mt-5 ml-5"> 
-                        <form action="router.php" method="post">
+                        <form action="Vues/ConfirmUserPage.php" method="post">
                             <input type="hidden" name="route" value="confirmuser">
                             <p class="little">Liste des utilisateurs<br>non confirmés</p>
                             <div> 

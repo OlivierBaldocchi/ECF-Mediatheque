@@ -1,9 +1,9 @@
 <?php
   
-namespace Modeles;
+namespace Classes;
 
 use PDO;
-use Modeles\Emprunt;
+use Classes\Emprunt;
 
 
 class EmpruntManager {
@@ -58,7 +58,7 @@ class EmpruntManager {
             if ($exeOk) {
                 $emprunts = [];
 
-                while($emprunt = $this->pdoStatement->fetchObject('Modeles\emprunt')) {
+                while($emprunt = $this->pdoStatement->fetchObject('Classes\emprunt')) {
                     $emprunts[] = $emprunt; 
                 }
                 return $emprunts;
@@ -79,7 +79,7 @@ class EmpruntManager {
                                                     ORDER BY emprunts.dateemprunt');
             $emprunts = [];
 
-            while ($emprunt = $this->pdoStatement->fetchObject('Modeles\emprunt')) {
+            while ($emprunt = $this->pdoStatement->fetchObject('Classes\emprunt')) {
                 $emprunts[] = $emprunt;
             }
             
