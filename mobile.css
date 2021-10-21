@@ -10,9 +10,10 @@
     background-color: #ffa500;
     font-family: 'Architects Daughter', cursive;
     border-radius: 10px;
-    width: 20vw;
     font-size: 4vw;
     height: auto;
+    width: auto;
+    color: white;
 }
 
 a {

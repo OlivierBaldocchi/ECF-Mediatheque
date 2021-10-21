@@ -13,9 +13,7 @@
     }
     
     .btnmenu, .button1, .button2 {
-        width: 15vw;
         font-size: 3vw;
-        height: auto;
     }
 
     .form_connexion {
@@ -39,9 +37,7 @@
 
 @media screen and (min-width: 990px) {
     .btnmenu, .button1, .button2 {
-        width: 5vw;
         font-size: 1.3vw;
-        height: auto;
     }
     
     h1 {
@@ -63,9 +59,7 @@
 
 @media screen and (min-width: 1200px) {   
     .btnmenu, .button1, .button2 {
-        width: 7vw;
         font-size: 1.3vw;
-        height: auto;
     }
         
     a {
@@ -117,9 +111,7 @@
     }
     
     .btnmenu, .button1, .button2 {
-        width: 10vw;
         font-size: 2vw;
-        height: auto;
     }
     
     a {
