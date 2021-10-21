@@ -22,8 +22,7 @@ if ($user === null) {
             $token = $_SESSION['token'];
            
             if ($user->getRole() === 'ADMIN') {
-                $_SESSION['role'] = 'ADMIN'; 
-                require_once 'Modeles/AutomaticChecks.php';
+                $_SESSION['role'] = 'ADMIN';  
                 require_once 'Vues/DashboardAdmin.php';                    
             } 
             elseif ($user->getRole() === 'EMPL') {

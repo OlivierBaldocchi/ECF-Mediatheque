@@ -127,7 +127,7 @@ class EmpruntManager {
 
             $resas = [];
 
-            while ($resa = $this->pdoStatement->fetchObject('Modeles\emprunt')) {
+            while ($resa = $this->pdoStatement->fetchObject('Classes\emprunt')) {
                 $resas[] = $resa;
             }
             

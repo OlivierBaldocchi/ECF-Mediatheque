@@ -3,8 +3,6 @@ require_once 'controller.php';
 $resas = automaticChecks();
 
 try {
-    
-
     foreach ($resas as $resa) {
         $date = $resa->getDateFinResa();
         $book = $resa->getBookid();

@@ -1,4 +1,6 @@
-<?php require 'index.html';?> 
+<?php 
+require_once 'index.html';
+require_once 'Modeles/AutomaticChecks.php';?> 
 
 <body>
     <?php
