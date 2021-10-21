@@ -197,7 +197,7 @@ function retour() {
     echo 'retour effectué';    
 }
 
-function createUser() {
+function createUser() { 
     $user = new User();
         
     $user->setNom(htmlspecialchars($_POST['nom'], ENT_QUOTES))
@@ -214,13 +214,11 @@ function createUser() {
         
     $userManager = new UserManager();
     $createOk = $userManager->create($user); 
-    return $createOk;      
-
-    if(isset($_POST['role']) && $createOk) {
-        echo 'Le nouvel ' .$_POST['role']. ' est créé';
-    }
-    if(isset($_POST['role']) && !$createOk) {
-        echo 'création impossible';
+    
+    if(isset($_POST['role'])) {
+       require_once 'Modeles/UserCreated.php';        
+    } else {
+        return $createOk;
     }
 }
 
