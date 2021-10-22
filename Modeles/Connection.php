@@ -3,7 +3,7 @@ require_once 'index.html';
 
 $user = $userManager->read($_POST['email']);
 
-if ($user === null) {
+if ($user == null) {
     echo 'Identifiants Invalides';
 } else { 
     if ($user->getRole() === 'En attente') {
