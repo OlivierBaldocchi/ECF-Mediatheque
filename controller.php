@@ -21,7 +21,19 @@ function automaticChecks() {
     $emprunt = new Emprunt();
     $empruntManager = new EmpruntManager();
     $resas = $empruntManager->checkFinResaDate();
-    return $resas;
+    try {
+        foreach ($resas as $resa) {
+            $date = $resa->getDateFinResa();
+            $book = $resa->getBookid();
+            if ($date < date('d/m/Y')) {
+                $delete = $empruntManager->delete($book);
+                $bookManager = new BookManager();
+                $retour = $bookManager->retour($book);
+            } 
+        }         
+    } catch (PDOException $e) {
+        echo 'Impossible de mettre à jour les réservations';
+    } 
 }
 
 function controlBook() {

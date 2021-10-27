@@ -1,6 +1,8 @@
 <?php 
 require_once 'index.html';
-require_once 'Modeles/AutomaticChecks.php';?> 
+require_once 'controller.php';
+automaticChecks();
+?> 
 
 <body>
     <?php
