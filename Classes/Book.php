@@ -10,8 +10,8 @@ class Book {
     private string $auteur;
     private string $genre;
     private int $statut;
+    private string $image;
     
-
     public function getId() {
         return $this->id;
     }
@@ -70,4 +70,12 @@ class Book {
         return $this;
     }
 
+    public function getImage() {
+        return $this->image;
+    }
+
+    public function setImage($image) {
+        $this->image = $image;
+        return $this;
+    }
 }

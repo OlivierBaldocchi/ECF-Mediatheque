@@ -28,7 +28,7 @@ class BookManager {
 
     public function create($book) {
         try {
-            $this->pdoStatement = $this->pdo->prepare('INSERT INTO books (titre,parution,description,auteur,genre,statut)
+            $this->pdoStatement = $this->pdo->prepare('INSERT INTO books (titre,parution,description,auteur,genre,statut,image)
                                                         VALUES (?,?,?,?,?,?)');
             $this->pdoStatement->bindValue(1,$book->getTitre(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(2,$book->getParution(), PDO::PARAM_STR);
@@ -36,7 +36,8 @@ class BookManager {
             $this->pdoStatement->bindValue(4,$book->getAuteur(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(5,$book->getGenre(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(6, 1);
-
+            $this->pdoStatement->bindValue(7,$book->getImage(), PDO::PARAM_STR);
+        
             return $exeOk = $this->pdoStatement->execute();
 
         } catch (PDOException $e) {

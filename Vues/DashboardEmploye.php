@@ -27,7 +27,8 @@
                             <input type="text" placeholder="parution" id="parution" name="parution">
                             <textarea class="mt-2" placeholder="description" id="description" name="description"></textarea>
                             <input type="text" placeholder="auteur" id="auteur" name="auteur">
-                            <input type="text" placeholder="genre" id="genre" name="genre">                                <button class="button2" type="submit">Envoyer</button>
+                            <input type="text" placeholder="genre" id="genre" name="genre"> 
+                            <button class="button2" type="submit">Envoyer</button>
                         </form>
                     </div>
             
