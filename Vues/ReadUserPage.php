@@ -1,8 +1,8 @@
 <?php 
-require 'index.html';
+require '../index.html';
 
 $token = $_SESSION['token'];  
-require_once 'Modeles/Token.php';
+require_once '../Modeles/Token.php';
 
 if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
 ?>
@@ -11,10 +11,13 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'MenuTitre.php'; ?>    
+            <?php include_once '../Vues/MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
-                <?php include_once 'ButtonLogOut.php'; ?>
+            <?php 
+                include_once '../Vues/ButtonLogOut.php'; 
+                include_once '../Vues/ButtonBack.php'; 
+                ?>    
             </div>
         </div>       
     </header>
@@ -25,7 +28,7 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
                 
                 <div class="col-10 col-lg-2 m-5 infos">
                     <p class="">Profil utilisateur</p>
-                    <form action="router.php" method="post">
+                    <form action="../Controllers/router.php" method="post">
                         <input type="hidden" name="route" value="canceluser">
                     <?php 
                                                       
@@ -36,7 +39,7 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
                             $_SESSION['emailToRead'] = $_GET['emailtoread'];
                         }
                     
-                        require_once 'Modeles/ReadUser.php';
+                        require_once '../Modeles/ReadUser.php';
                        
                         if($_SESSION['role'] === 'ADMIN') {
                             $_SESSION['idToCancel'] = $read->getId();
@@ -52,20 +55,20 @@ if ($_SESSION['role'] === 'EMPL' || $_SESSION['role'] === 'ADMIN') {
                 <div class="col-10 col-lg-3 m-5">
                     <p class="little">Livres réservés</p>
                     <?php
-                    require_once 'controller.php';
+                    require_once '../Controllers/controller.php';
                     $id = $read->getId();                      
                     $list = userReservedBooks($id);                 
-                    require_once 'Modeles/UserReservedBooks.php';
+                    require_once '../Modeles/UserReservedBooks.php';
                     ?>
                 </div>                     
                 
                 <div class="col-10 col-lg-4 m-5">
                     <p class="little">Livres empruntés</p>
                     <?php
-                    require_once 'controller.php';
+                    require_once '../Controllers/controller.php';
                     $id = $read->getId();
                     $list = userReservedBooks($id);                   
-                    require_once 'Modeles/EmpruntsUser.php';
+                    require_once '../Modeles/EmpruntsUser.php';
                       
                     ?>
                 </div>  

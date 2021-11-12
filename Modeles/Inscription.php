@@ -9,7 +9,7 @@ if (validateDate($_POST['date_naissance'])) {
     if ($_POST['nom'] !== '' && $_POST['prenom'] !== '' && $_POST['date_naissance'] !== '' 
         && $_POST['email'] !== '' && $_POST['password'] !== '' && $_POST['adresse'] !== '') {
 
-        require_once '../controller.php';    
+        require_once '../Controllers/controller.php';    
         $createOk = createUser();  
 
         if ($createOk) {

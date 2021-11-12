@@ -7,7 +7,7 @@ require '../index.html';
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'MenuTitre.php';?>   
+            <?php include_once '../Vues/MenuTitre.php';?>   
               
             <div class="col-3 col-md-2">
                 

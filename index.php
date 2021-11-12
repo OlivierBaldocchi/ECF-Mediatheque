@@ -7,7 +7,7 @@
             <?php include_once 'Vues/MenuTitre.php';?>   
               
             <div class="col-5 col-xl-2 mt-3">
-                <form class="form_connexion" action="router.php" method="post"> 
+                <form class="form_connexion" action="Controllers/router.php" method="post"> 
                     <input type="hidden" name="route" value="connexion">
                     <div>
                         <input type="text" placeholder="email" id="email" name="email">

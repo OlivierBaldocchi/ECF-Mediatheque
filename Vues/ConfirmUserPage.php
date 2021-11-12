@@ -12,7 +12,10 @@ require_once '../Modeles/Token.php';
             <?php include_once '../Vues/MenuTitre.php'; ?>    
               
             <div class="col-10 col-lg-5 col-xl-2 m-4">
-                <?php include_once '../Vues/ButtonLogOut.php'; ?>
+            <?php 
+                include_once '../Vues/ButtonLogOut.php'; 
+                include_once '../Vues/ButtonBack.php'; 
+                ?>    
             </div>
         </div>       
     </header>
@@ -25,7 +28,7 @@ require_once '../Modeles/Token.php';
                 <div class="col-10 col-md-6 little">
                     <?php
 
-                    include_once '../controller.php';
+                    include_once '../Controllers/controller.php';
                     $read = readUser();
                                                                
                     ?>

@@ -1,7 +1,7 @@
 <?php 
-require_once 'index.html'; 
+require_once '../index.html'; 
 $token = $_SESSION['token'];  
-require_once 'Modeles/Token.php';
+require_once '../Modeles/Token.php';
 
 if (isset($_SESSION['role'])) {
  ?>
@@ -10,10 +10,13 @@ if (isset($_SESSION['role'])) {
     <header class="container-fluid">
         <div class="row title">
             
-            <?php include_once 'MenuTitre.php'; ?>    
+            <?php include_once '../Vues/MenuTitre.php'; ?>    
               
             <div class="col-3 col-md-2 m-4">
-                <?php include_once 'ButtonLogOut.php'; ?>
+            <?php 
+                include_once '../Vues/ButtonLogOut.php'; 
+                include_once '../Vues/ButtonBack.php'; 
+                ?>    
             </div>
             
         </div>       

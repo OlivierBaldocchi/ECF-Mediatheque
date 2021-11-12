@@ -1,11 +1,11 @@
 <?php
 
-require_once 'Classes/User.php';
-require_once 'Classes/UserManager.php';
-require_once 'Classes/Book.php';
-require_once 'Classes/BookManager.php';
-require_once 'Classes/Emprunt.php';
-require_once 'Classes/EmpruntManager.php';
+require_once '../Classes/User.php';
+require_once '../Classes/UserManager.php';
+require_once '../Classes/Book.php';
+require_once '../Classes/BookManager.php';
+require_once '../Classes/Emprunt.php';
+require_once '../Classes/EmpruntManager.php';
 
 use Classes\User; 
 use Classes\UserManager; 
@@ -39,7 +39,7 @@ function automaticChecks() {
 function controlBook() {
     $bookManager = new BookManager();
     $books = $bookManager->readAll();
-    require_once 'Vues/BooksListPage.php';
+    require_once '../Vues/BooksListPage.php';
 }
 
 function controlBookJava() {
@@ -52,7 +52,7 @@ function readBookByTitre() {
     $bookManager = new BookManager();
     $titre = $_POST['book'];
     $read = $bookManager->readByTitre($titre);  
-    require_once 'Vues/BookInfosByTitrePage.php'; 
+    require_once '../Vues/BookInfosByTitrePage.php'; 
 }
 
 function reserv() {
@@ -77,20 +77,20 @@ function reserv() {
         ->setDateRetour('réservé');
 
     $resa = $empruntManager->create($emprunt); 
-    require_once 'Vues/ReservBookPage.php';
+    require_once '../Vues/ReservBookPage.php';
 }
 
 function readBook() {
     $bookManager = new BookManager();
     $id = $_GET['id'];
     $read = $bookManager->read($id);   
-    require_once 'Vues/BookInfosPage.php';
+    require_once '../Vues/BookInfosPage.php';
 }
 
 function connect() {
     $user = new User();
     $userManager = new UserManager();
-    require_once 'Modeles/Connection.php';
+    require_once '../Modeles/Connection.php';
 }
 
 function createBook() {
@@ -100,7 +100,8 @@ function createBook() {
         ->setParution($_POST['parution'])
         ->setDescription($_POST['description'])
         ->setAuteur($_POST['auteur'])
-        ->setGenre($_POST['genre']);
+        ->setGenre($_POST['genre'])
+        ->setImage($_POST['image']);
         
     $bookmanager = new bookManager();
 
@@ -108,6 +109,9 @@ function createBook() {
 
     if($createOk) {
         echo 'Bravo le nouveau livre est enregistré.';
+        session_start();
+        include_once '../Vues/ButtonLogOut.php'; 
+        include_once '../Vues/ButtonBack.php'; 
     }
 }    
 
@@ -130,14 +134,14 @@ function readUser() {
     $email = $_POST['list_email'];
     $read = $userManager->read($email); 
     return $read; 
-    require_once 'Vues/ConfirmUserPage.php';
+    require_once '../Vues/ConfirmUserPage.php';
 }
 
 function readInfosUser() {
     $userManager = new UserManager();
-    $email = $_SESSION['emailToRead'];
-    $read = $userManager->read($email);  
-    require_once 'Vues/ReadUserPage.php';
+    /*$email = $_SESSION['emailToRead'];
+    $read = $userManager->read($email);  */
+    require_once '../Vues/ReadUserPage.php';
 }
 
 function readProfilUser() {
@@ -228,7 +232,7 @@ function createUser() {
     $createOk = $userManager->create($user); 
     
     if(isset($_POST['role'])) {
-       require_once 'Modeles/UserCreated.php';        
+       require_once '../Modeles/UserCreated.php';        
     } else {
         return $createOk;
     }
@@ -247,6 +251,8 @@ function cancelUser() {
         } else {
             echo 'suppression impossible';
         }
+        include_once '../Vues/ButtonLogOut.php'; 
+        include_once '../Vues/ButtonBack.php'; 
     } else {
         echo 'Vous n\êtes pas autorisé à entrer sur cette page';
     }

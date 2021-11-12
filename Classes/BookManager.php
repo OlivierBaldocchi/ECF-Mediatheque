@@ -29,7 +29,7 @@ class BookManager {
     public function create($book) {
         try {
             $this->pdoStatement = $this->pdo->prepare('INSERT INTO books (titre,parution,description,auteur,genre,statut,image)
-                                                        VALUES (?,?,?,?,?,?)');
+                                                        VALUES (?,?,?,?,?,?,?)');
             $this->pdoStatement->bindValue(1,$book->getTitre(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(2,$book->getParution(), PDO::PARAM_STR);
             $this->pdoStatement->bindValue(3,$book->getDescription(), PDO::PARAM_STR);
