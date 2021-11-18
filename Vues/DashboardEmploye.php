@@ -25,7 +25,9 @@
                             <input type="hidden" name="route" value="createbook">
                             <input type="text" placeholder="titre" id="titre" name="titre">
                             <input type="text" placeholder="parution" id="parution" name="parution">
+                            <div>
                             <textarea class="mt-2" placeholder="description" id="description" name="description"></textarea>
+                            </div>
                             <input type="text" placeholder="auteur" id="auteur" name="auteur">
                             <input type="text" placeholder="genre" id="genre" name="genre"> 
                             <input type="text" placeholder="image" id="image" name="image"> 
